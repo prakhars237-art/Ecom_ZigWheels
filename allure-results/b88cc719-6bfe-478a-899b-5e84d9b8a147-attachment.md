@@ -1,0 +1,475 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: findlatestcars.spec.ts >> Find Latest Cars >> Find Latest Cars
+- Location: tests\findlatestcars.spec.ts:17:5
+
+# Error details
+
+```
+Error: expect(page).toHaveURL(expected) failed
+
+Expected pattern: /.*New Cars.*/
+Received string:  "https://www.zigwheels.com/launches"
+Timeout: 5000ms
+
+Call log:
+  - Expect "toHaveURL" with timeout 5000ms
+    13 × unexpected value "https://www.zigwheels.com/launches"
+
+```
+
+```yaml
+- banner:
+  - link "Home":
+    - /url: /
+    - img "Home"
+  - navigation:
+    - list:
+      - listitem:  NEWS & REVIEWS
+      - listitem:  NEW CARS
+      - listitem:  NEW BIKES
+      - listitem:  SCOOTERS
+      - listitem:  MORE
+  - textbox "Creta, Community, On Road Price, Ola S1, TVS Bikes":
+    - /placeholder: Search car or bike
+  - button ""
+  - text: 
+- text: Ad
+- main:
+  - heading "Latest Cars in India" [level=1]
+  - paragraph: The most popular Latest Cars in India are BMW X6 (₹1.78 crore), Mini Countryman C (₹47.50 lakh), Mercedes-Benz S-Class (₹2.20 crore) and Toyota Urban Cruiser EBELLA (₹23.60 lakh). Check our complete list of 50 Latest Cars in the price range of Rs. 4.50 Lakh - Rs. 10.37 Crore.
+  - heading "Latest Car Launches" [level=2]
+  - list:
+    - listitem "BMW X6":
+      - img "BMW X6"
+      - link "BMW X6":
+        - /url: https://www.zigwheels.com/bmw-cars/x6
+      - text: ₹ 1.78 Crore 4395 CC ● Petrol
+      - link "Check On Road Price":
+        - /url: https://www.zigwheels.com/bmw-cars/x6/on-road-price-delhi
+      - text: "EMI : ₹3.44 Lakh"
+      - table:
+        - rowgroup:
+          - row "Compare":
+            - cell "Compare":
+              - checkbox
+              - text: Compare
+    - listitem "Mini Countryman C":
+      - img "Mini Countryman C"
+      - link "Mini Countryman C":
+        - /url: https://www.zigwheels.com/mini-cars/countryman-c
+      - text: ₹ 47.50 Lakh 154.21bhp ● Electric
+      - link "Check On Road Price":
+        - /url: https://www.zigwheels.com/mini-cars/countryman-c/on-road-price-delhi
+      - text: "EMI : ₹91,886"
+      - table:
+        - rowgroup:
+          - row "Compare":
+            - cell "Compare":
+              - checkbox
+              - text: Compare
+    - listitem
+    - listitem "Mercedes-Benz S-Class":
+      - img "Mercedes-Benz S-Class"
+      - link "Mercedes-Benz S-Class":
+        - /url: https://www.zigwheels.com/mercedes-benz-cars/s-class
+      - text: ₹ 2.20 Crore 2999 CC ● Petrol
+      - link "Check On Road Price":
+        - /url: https://www.zigwheels.com/mercedes-benz-cars/s-class/on-road-price-delhi
+      - text: "EMI : ₹4.26 Lakh"
+      - link "4 | read reviews":
+        - /url: /user-reviews/mercedes-benz/s-class
+      - table:
+        - rowgroup:
+          - row "Compare":
+            - cell "Compare":
+              - checkbox
+              - text: Compare
+    - listitem "Toyota Urban Cruiser EBELLA":
+      - img "Toyota Urban Cruiser EBELLA"
+      - link "Toyota Urban Cruiser EBELLA":
+        - /url: https://www.zigwheels.com/toyota-cars/urban-cruiser-ebella
+      - text: ₹ 23.60 Lakh 142.15 - 171.65bhp ● 440 km - 543 km ● Electric
+      - link "Check On Road Price":
+        - /url: https://www.zigwheels.com/toyota-cars/urban-cruiser-ebella/on-road-price-delhi
+      - text: "EMI : ₹45,653"
+      - table:
+        - rowgroup:
+          - row "Compare":
+            - cell "Compare":
+              - checkbox
+              - text: Compare
+    - listitem "Tata Tiago EV":
+      - img "Tata Tiago EV"
+      - link "Tata Tiago EV":
+        - /url: https://www.zigwheels.com/tata-cars/tiago-ev
+      - text: ₹ 6.99 Lakh 73.75 kW ● 226 km - 285 km ● Electric
+      - link "Check On Road Price":
+        - /url: https://www.zigwheels.com/tata-cars/tiago-ev/on-road-price-delhi
+      - text: "EMI : ₹13,522"
+      - link "4.3 | 21 reviews":
+        - /url: /user-reviews/tata/tiago-ev
+      - table:
+        - rowgroup:
+          - row "Compare":
+            - cell "Compare":
+              - checkbox
+              - text: Compare
+    - listitem "Tata Tiago":
+      - img "Tata Tiago"
+      - link "Tata Tiago":
+        - /url: https://www.zigwheels.com/tata-cars/tiago
+      - text: ₹ 4.70 Lakh 1197 - 1199 CC ● Petrol ● CNG
+      - link "Check On Road Price":
+        - /url: https://www.zigwheels.com/tata-cars/tiago/on-road-price-delhi
+      - text: "EMI : ₹9,092"
+      - link "4 | 35 reviews":
+        - /url: /user-reviews/tata/tiago
+      - table:
+        - rowgroup:
+          - row "Compare":
+            - cell "Compare":
+              - checkbox
+              - text: Compare
+    - listitem "MG Majestor":
+      - img "MG Majestor"
+      - link "MG Majestor":
+        - /url: https://www.zigwheels.com/mg-motor-cars/majestor
+      - text: ₹ 40.99 Lakh 1996 CC ● Diesel
+      - link "Check On Road Price":
+        - /url: https://www.zigwheels.com/mg-motor-cars/majestor/on-road-price-delhi
+      - text: "EMI : ₹79,293"
+      - link "4.5 | read reviews":
+        - /url: /user-reviews/mg-motor/majestor
+      - table:
+        - rowgroup:
+          - row "Compare":
+            - cell "Compare":
+              - checkbox
+              - text: Compare
+    - listitem "Honda City":
+      - img "Honda City"
+      - link "Honda City":
+        - /url: https://www.zigwheels.com/honda-cars/city
+      - text: ₹ 12.00 Lakh 1498 CC ● 27 kmpl ● Petrol
+      - link "Check On Road Price":
+        - /url: https://www.zigwheels.com/honda-cars/city/on-road-price-delhi
+      - text: "EMI : ₹23,211"
+      - link "4.3 | read reviews":
+        - /url: /user-reviews/honda/city
+      - table:
+        - rowgroup:
+          - row "Compare":
+            - cell "Compare":
+              - checkbox
+              - text: Compare
+    - listitem "BMW M440i":
+      - img "BMW M440i"
+      - link "BMW M440i":
+        - /url: https://www.zigwheels.com/bmw-cars/m440i
+      - text: ₹ 1.09 Crore 2998 CC ● Petrol
+      - link "Check On Road Price":
+        - /url: https://www.zigwheels.com/bmw-cars/m440i/on-road-price-delhi
+      - text: "EMI : ₹2.11 Lakh"
+      - table:
+        - rowgroup:
+          - row "Compare":
+            - cell "Compare":
+              - checkbox
+              - text: Compare
+    - listitem "Hyundai IONIQ 5":
+      - img "Hyundai IONIQ 5"
+      - link "Hyundai IONIQ 5":
+        - /url: https://www.zigwheels.com/hyundai-cars/ioniq-5-facelift
+      - text: ₹ 55.70 Lakh 225bhp ● 690 km ● Electric
+      - link "Check On Road Price":
+        - /url: https://www.zigwheels.com/hyundai-cars/ioniq-5-facelift/on-road-price-delhi
+      - text: "EMI : ₹1.08 Lakh"
+      - link "4.7 | read reviews":
+        - /url: /user-reviews/hyundai/ioniq-5-facelift
+      - table:
+        - rowgroup:
+          - row "Compare":
+            - cell "Compare":
+              - checkbox
+              - text: Compare
+    - listitem "Mercedes-Benz CLA Electric":
+      - img "Mercedes-Benz CLA Electric"
+      - link "Mercedes-Benz CLA Electric":
+        - /url: https://www.zigwheels.com/mercedes-benz-cars/cla-electric
+      - text: ₹ 55.00 Lakh 221.26 - 268.20bhp ● 542 km - 792 km ● Electric
+      - link "Check On Road Price":
+        - /url: https://www.zigwheels.com/mercedes-benz-cars/cla-electric/on-road-price-delhi
+      - text: "EMI : ₹1.06 Lakh"
+      - table:
+        - rowgroup:
+          - row "Compare":
+            - cell "Compare":
+              - checkbox
+              - text: Compare
+    - listitem "VinFast VF MPV 7":
+      - img "VinFast VF MPV 7"
+      - link "VinFast VF MPV 7":
+        - /url: https://www.zigwheels.com/vinfast-cars/vf-mpv-7
+      - text: ₹ 24.49 Lakh 201.20bhp ● 517 km ● Electric
+      - link "Check On Road Price":
+        - /url: https://www.zigwheels.com/vinfast-cars/vf-mpv-7/on-road-price-delhi
+      - text: "EMI : ₹47,375"
+      - table:
+        - rowgroup:
+          - row "Compare":
+            - cell "Compare":
+              - checkbox
+              - text: Compare
+    - listitem "Volkswagen Taigun":
+      - img "Volkswagen Taigun"
+      - link "Volkswagen Taigun":
+        - /url: https://www.zigwheels.com/volkswagen-cars/taigun
+      - text: ₹ 11.00 Lakh 999 - 1498 CC ● 18 kmpl ● Petrol
+      - link "Check On Road Price":
+        - /url: https://www.zigwheels.com/volkswagen-cars/taigun/on-road-price-delhi
+      - text: "EMI : ₹21,277"
+      - table:
+        - rowgroup:
+          - row "Compare":
+            - cell "Compare":
+              - checkbox
+              - text: Compare
+    - listitem "Skoda Kushaq":
+      - img "Skoda Kushaq"
+      - link "Skoda Kushaq":
+        - /url: https://www.zigwheels.com/skoda-cars/kushaq
+      - text: ₹ 10.69 Lakh 999 - 1498 CC ● 18 kmpl ● Petrol
+      - link "Check On Road Price":
+        - /url: https://www.zigwheels.com/skoda-cars/kushaq/on-road-price-delhi
+      - text: "EMI : ₹20,679"
+      - table:
+        - rowgroup:
+          - row "Compare":
+            - cell "Compare":
+              - checkbox
+              - text: Compare
+    - listitem "Lexus ES":
+      - img "Lexus ES"
+      - link "Lexus ES":
+        - /url: https://www.zigwheels.com/lexus-cars/es-2026
+      - text: ₹ 89.99 Lakh 214.56 - 338bhp ● 580 km ● Electric
+      - link "Check On Road Price":
+        - /url: https://www.zigwheels.com/lexus-cars/es-2026/on-road-price-delhi
+      - text: "EMI : ₹1.74 Lakh"
+      - table:
+        - rowgroup:
+          - row "Compare":
+            - cell "Compare":
+              - checkbox
+              - text: Compare
+    - listitem "Hyundai Exter":
+      - img "Hyundai Exter"
+      - link "Hyundai Exter":
+        - /url: https://www.zigwheels.com/hyundai-cars/exter
+      - text: ₹ 5.81 Lakh 1197 CC ● Petrol ● CNG
+      - link "Check On Road Price":
+        - /url: https://www.zigwheels.com/hyundai-cars/exter/on-road-price-delhi
+      - text: "EMI : ₹11,231"
+      - table:
+        - rowgroup:
+          - row "Compare":
+            - cell "Compare":
+              - checkbox
+              - text: Compare
+    - listitem "Ferrari 849 Testarossa":
+      - img "Ferrari 849 Testarossa"
+      - link "Ferrari 849 Testarossa":
+        - /url: https://www.zigwheels.com/ferrari-cars/849-testarossa
+      - text: ₹ 10.37 Crore 3990 CC ● Petrol
+      - link "Check On Road Price":
+        - /url: https://www.zigwheels.com/ferrari-cars/849-testarossa/on-road-price-delhi
+      - text: "EMI : ₹20.06 Lakh"
+      - table:
+        - rowgroup:
+          - row "Compare":
+            - cell "Compare":
+              - checkbox
+              - text: Compare
+    - listitem "Audi SQ8":
+      - img "Audi SQ8"
+      - link "Audi SQ8":
+        - /url: https://www.zigwheels.com/audi-cars/sq8
+      - text: ₹ 1.78 Crore 3996 CC ● Petrol
+      - link "Check On Road Price":
+        - /url: https://www.zigwheels.com/audi-cars/sq8/on-road-price-delhi
+      - text: "EMI : ₹3.44 Lakh"
+      - table:
+        - rowgroup:
+          - row "Compare":
+            - cell "Compare":
+              - checkbox
+              - text: Compare
+    - listitem "Renault Duster":
+      - img "Renault Duster"
+      - link "Renault Duster":
+        - /url: https://www.zigwheels.com/renault-cars/duster
+      - text: ₹ 10.49 Lakh 999 - 1333 CC ● 18 kmpl ● Petrol
+      - link "Check On Road Price":
+        - /url: https://www.zigwheels.com/renault-cars/duster/on-road-price-delhi
+      - text: "EMI : ₹20,292"
+      - link "4.5 | read reviews":
+        - /url: /user-reviews/renault/duster
+      - table:
+        - rowgroup:
+          - row "Compare":
+            - cell "Compare":
+              - checkbox
+              - text: Compare
+    - listitem "Hyundai Verna":
+      - img "Hyundai Verna"
+      - link "Hyundai Verna":
+        - /url: https://www.zigwheels.com/hyundai-cars/verna
+      - text: ₹ 10.99 Lakh 1482 - 1497 CC ● Petrol
+      - link "Check On Road Price":
+        - /url: https://www.zigwheels.com/hyundai-cars/verna/on-road-price-delhi
+      - text: "EMI : ₹21,263"
+      - link "4.6 | 36 reviews":
+        - /url: /user-reviews/hyundai/verna
+      - table:
+        - rowgroup:
+          - row "Compare":
+            - cell "Compare":
+              - checkbox
+              - text: Compare
+  - text: View More Cars
+  - list:
+    - listitem: Cars by Budget
+    - listitem: Body Style
+    - listitem: Engine Displacement
+  - link "Under 4 Lakh":
+    - /url: /newcars/cars-under-4-lakhs
+  - link "Under 5 Lakh":
+    - /url: /newcars/cars-under-5-lakhs
+  - link "Under 6 Lakh":
+    - /url: /newcars/cars-under-6-lakhs
+  - link "Under 8 Lakh":
+    - /url: /newcars/cars-under-8-lakhs
+  - link "Under 10 Lakh":
+    - /url: /newcars/cars-under-10-lakhs
+  - link "Under 15 Lakh":
+    - /url: /newcars/cars-under-15-lakhs
+  - link "Under 20 Lakh":
+    - /url: /newcars/cars-under-20-lakhs
+  - link "Under 40 Lakh":
+    - /url: /newcars/cars-under-40-lakhs
+  - link "Above 40 Lakh":
+    - /url: /newcars/cars-above-40-lakhs
+  - link "More Options":
+    - /url: /new_car_search.html
+  - heading "News of Latest Cars in India" [level=2]
+  - article:
+    - link "Top 5 Things That Still Make The Mercedes-Benz S-Class The Ultimate Mercedes Experience":
+      - /url: /news-features/general-news/top-5-things-that-still-make-the-mercedes-benz-s-class-the-ultimate-mercedes-experience/58007/
+    - text: By Team Zigwheels 23 Jun, 2026 908 views
+    - figure:
+      - img "Top 5 Things That Still Make The Mercedes-Benz S-Class The Ultimate Mercedes Experience"
+  - article:
+    - 'link "Current And Upcoming Plug-In Hybrid Cars In India: Jetour T2; BYD Seal U; Mercedes-Benz S 450e And More!"':
+      - /url: /news-features/general-news/current-and-upcoming-plug-in-hybrid-cars-in-india-jetour-t2-byd-seal-u-mercedes-benz-s-450e-and-more/57992/
+    - text: By Nabeel Khan 18 Jun, 2026 1483 views
+    - figure:
+      - 'img "Current And Upcoming Plug-In Hybrid Cars In India: Jetour T2; BYD Seal U; Mercedes-Benz S 450e And More!"'
+  - article:
+    - 'link "Mini Countryman C Launched In India At Rs 47.50 Lakh: Know Everything About The Biggest Mini Yet!"':
+      - /url: /news-features/launch-story/mini-countryman-c-launched-in-india-at-rs-47.50-lakh-know-everything-about-the-biggest-mini-yet/57987/
+    - text: By Bikramjit Hati 17 Jun, 2026 3298 views
+    - figure:
+      - 'img "Mini Countryman C Launched In India At Rs 47.50 Lakh: Know Everything About The Biggest Mini Yet!"'
+  - article:
+    - link "2026 Mercedes-Benz S-Class Facelift Launched In India At Rs 2.20 Crore; The Luxury Sedan Now Gets A Plug-in Hybrid Powertrain!":
+      - /url: /news-features/launch-story/2026-mercedes-benz-s-class-facelift-launched-in-india-at-rs-2.20-crore-the-luxury-sedan-now-gets-a-plug-in-hybrid-powertrain/57981/
+    - text: By Team Zigwheels 15 Jun, 2026 1316 views
+    - figure:
+      - img "2026 Mercedes-Benz S-Class Facelift Launched In India At Rs 2.20 Crore; The Luxury Sedan Now Gets A Plug-in Hybrid Powertrain!"
+- list:
+  - listitem:
+    - link "Home":
+      - /url: https://www.zigwheels.com
+    - text: ›
+  - listitem:
+    - link "New Cars":
+      - /url: /newcars
+    - text: ›
+  - listitem: Latest Cars in India
+- contentinfo:
+  - list:
+    - listitem:
+      - link "About Us":
+        - /url: /aboutus
+    - listitem: Advertise with us
+    - listitem:
+      - link "contact us":
+        - /url: /contactus
+  - list:
+    - listitem:
+      - link "Terms of use":
+        - /url: /termsofuse
+    - listitem:
+      - link "privacy policy":
+        - /url: /privacypolicy
+    - listitem: feedback
+  - img "zig-logo"
+  - list:
+    - listitem:
+      - link "":
+        - /url: https://www.facebook.com/zigwheels
+    - listitem:
+      - link "":
+        - /url: https://x.com/zigwheels
+    - listitem:
+      - link "":
+        - /url: https://www.youtube.com/channel/UCjmjWp38PCg15Z5ZS-tmpfw
+    - listitem:
+      - link "":
+        - /url: https://www.instagram.com/zigwheels
+    - listitem:
+      - link "":
+        - /url: https://in.linkedin.com/company/zigwheels
+  - text: Download ZigWheels app 4.6  User Rating 10 Lakh+ Download
+  - img "appimg"
+  - img "appimg"
+  - text: © 2008-2026 Girnar Software Pvt. Ltd. All rights Reserved.
+- text: Compare Close
+```
+
+# Test source
+
+```ts
+  1  | import{test,expect} from '@playwright/test';
+  2  | import { HomePage } from '../Pages/HomePage';
+  3  | import { NewCarsPage } from '../Pages/NewCarsPage';
+  4  | 
+  5  | 
+  6  | test.describe('Find Latest Cars', () => {
+  7  | let homePage: HomePage;
+  8  | let newCarsPage: NewCarsPage;
+  9  | 
+  10 | test.beforeEach(async ({ page }) => {
+  11 | homePage = new HomePage(page);
+  12 | newCarsPage = new NewCarsPage(page);
+  13 | await homePage.navigateTo();
+  14 | 
+  15 | });
+  16 | 
+  17 | test('Find Latest Cars', async ({ page }) => {
+  18 |   await homePage.findLatestCars();
+> 19 |   await expect(page).toHaveURL(/.*New Cars.*/);
+     |                      ^ Error: expect(page).toHaveURL(expected) failed
+  20 |   await console.log(newCarsPage.getHeadingText());
+  21 |   await expect( newCarsPage.getHeadingText()).toContain('New Cars');
+  22 |   //await expect( newCarsPage.getHeadingText()).toContain('New Cars');
+  23 | });
+  24 | });
+```

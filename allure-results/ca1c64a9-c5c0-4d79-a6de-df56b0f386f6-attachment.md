@@ -1,0 +1,746 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: findlatestcars.spec.ts >> Find Latest Cars >> SEARCH-001 Verify valid car search
+- Location: tests\findlatestcars.spec.ts:53:5
+
+# Error details
+
+```
+Error: expect(page).toHaveURL(expected) failed
+
+Expected pattern: /hyundai-cars\/creta/
+Received string:  "https://www.zigwheels.com/"
+Timeout: 5000ms
+
+Call log:
+  - Expect "toHaveURL" with timeout 5000ms
+    13 × unexpected value "https://www.zigwheels.com/"
+
+```
+
+```yaml
+- banner:
+  - link "Home":
+    - /url: /
+    - img "Home"
+  - navigation:
+    - list:
+      - listitem:  NEWS & REVIEWS
+      - listitem:  NEW CARS
+      - listitem:  NEW BIKES
+      - listitem:  SCOOTERS
+      - listitem:  MORE
+  - textbox "Creta, Community, On Road Price, Ola S1, TVS Bikes":
+    - /placeholder: ""
+    - text: Hyundai Creta
+  - button ""
+  - text: 
+- list:
+  - listitem:
+    - link:
+      - /url: https://www.zigwheels.com/news-features/general-news/bmw-x1-long-wheelbase-launched-rear-seat-space-no-rival-can-match-in-segment/58200/
+  - listitem:
+    - link:
+      - /url: https://www.zigwheels.com/news-features/general-news/bmw-unveils-the-i5-lwb-for-the-first-time-in-india/58202/
+  - listitem:
+    - link:
+      - /url: https://www.zigwheels.com/news-features/general-news/2026-skoda-slavia-facelift-unveiled-now-comes-with-rear-massage-seats/58192/
+  - listitem:
+    - link:
+      - /url: https://www.zigwheels.com/news-features/general-news/breaking-2026-royal-enfield-continental-gt-650-launched-minor-tweaks-new-prices/58177/
+  - listitem:
+    - link:
+      - /url: https://www.zigwheels.com/news-features/general-news/new-bajaj-pulsar-125-first-look-review/58181/
+- list:
+  - listitem:
+    - link "1":
+      - /url: "#"
+  - listitem:
+    - link "2":
+      - /url: "#"
+  - listitem:
+    - link "3":
+      - /url: "#"
+  - listitem:
+    - link "4":
+      - /url: "#"
+  - listitem:
+    - link "5":
+      - /url: "#"
+- heading "Find Your Dream Car or Bike" [level=1]
+- textbox "Search car or bike"
+- button
+- heading "Browse Cars By" [level=2]
+- list:
+  - listitem: Budget
+  - listitem: Brand
+  - listitem: Fuel Type
+  - listitem: Transmission
+  - listitem: Seating Capacity
+- link "Cars under 4 Lakh":
+  - /url: https://www.zigwheels.com/newcars/cars-under-4-lakhs
+- link "Cars under 6 Lakh":
+  - /url: https://www.zigwheels.com/newcars/cars-under-6-lakhs
+- link "Cars under 10 Lakh":
+  - /url: https://www.zigwheels.com/newcars/cars-under-10-lakhs
+- link "Cars under 15 Lakh":
+  - /url: https://www.zigwheels.com/newcars/cars-under-15-lakhs
+- link "Cars under 20 Lakh":
+  - /url: https://www.zigwheels.com/newcars/cars-under-20-lakhs
+- link "Cars under 40 Lakh":
+  - /url: https://www.zigwheels.com/newcars/cars-under-40-lakhs
+- link "Cars above 40 Lakh":
+  - /url: https://www.zigwheels.com/newcars/cars-above-40-lakhs
+- heading "Browse Bikes By" [level=2]
+- list:
+  - listitem: Budget
+  - listitem: Brand
+  - listitem: Displacement
+- link "Bikes under 70000":
+  - /url: https://www.zigwheels.com/newbikes/bikes-under-70000
+- link "Bikes under 1 Lakh":
+  - /url: https://www.zigwheels.com/newbikes/bikes-under-1-lakh
+- link "Bikes under 2 Lakh":
+  - /url: https://www.zigwheels.com/newbikes/bikes-under-2-lakhs
+- link "Bikes under 5 Lakh":
+  - /url: https://www.zigwheels.com/newbikes/bikes-under-5-lakhs
+- link "Bikes above 5 Lakh":
+  - /url: https://www.zigwheels.com/newbikes/bikes-above-5-lakhs
+- heading "Latest Auto Updates" [level=2]
+- list:
+  - listitem: Latest
+  - listitem: Reviews
+  - listitem: Videos
+  - listitem: Web Stories
+- list:
+  - listitem:
+    - 'img "BREAKING: Honda ADV 160 & Rebel 300 Launched In India"'
+    - 'link "BREAKING: Honda ADV 160 & Rebel 300 Launched In India"':
+      - /url: /news-features/general-news/breaking-honda-adv-160-rebel-300-launched-in-india/58210/
+    - text: 25 Aug, 2026 138 views
+  - listitem:
+    - img "Volkswagen To Bring A Sportier Kylaq With Sporty Sub-4-Metre SUV"
+    - link "Volkswagen To Bring A Sportier Kylaq With Sporty Sub-4-Metre SUV":
+      - /url: /news-features/general-news/volkswagen-to-bring-a-sportier-kylaq-with-sporty-sub-4-metre-suv/58209/
+    - text: 24 Aug, 2026 1040 views
+  - listitem:
+    - 'img "BREAKING: 2026 Bajaj Pulsar 125 Launched In India: New Engine, Chassis And 5-Inch TFT"'
+    - 'link "BREAKING: 2026 Bajaj Pulsar 125 Launched In India: New Engine,..."':
+      - /url: /news-features/launch-story/breaking-2026-bajaj-pulsar-125-launched-in-india-new-engine-chassis-and-5-inch-tft/58208/
+    - text: 24 Aug, 2026 1997 views
+  - listitem:
+    - img "Upcoming Bajaj ADV Spied Testing On Indian Roads Again"
+    - link "Upcoming Bajaj ADV Spied Testing On Indian Roads Again":
+      - /url: /news-features/spiedteasers/upcoming-bajaj-adv-spied-testing-on-indian-roads-again/58206/
+    - text: 24 Aug, 2026 578 views
+  - listitem:
+    - 'img "BREAKING: New Bajaj Pulsar 150 Launched In India: Gets New Engine, Monoshock And TFT"'
+    - 'link "BREAKING: New Bajaj Pulsar 150 Launched In India: Gets New Engine,..."':
+      - /url: /news-features/launch-story/breaking-new-bajaj-pulsar-150-launched-in-india-gets-new-engine-monoshock-and-tft/58207/
+    - text: 24 Aug, 2026 917 views
+  - listitem:
+    - img "The Royal Enfield Himalayan | I finally fell for it, Again?"
+    - link "The Royal Enfield Himalayan | I finally fell for it, Again?":
+      - /url: /news-features/general-news/the-royal-enfield-himalayan-i-finally-fell-for-it-again/58205/
+    - text: 23 Aug, 2026 1007 views
+- link "All News Updates":
+  - /url: /news
+- heading "New Cars in India" [level=2]
+- list:
+  - listitem: Popular
+  - listitem: Latest
+  - listitem: Upcoming
+- list:
+  - listitem:
+    - img "Maruti Brezza"
+    - link "Maruti Brezza":
+      - /url: /maruti-suzuki-cars/brezza
+    - text: Rs. 7.40 Lakh
+  - listitem:
+    - img "Mahindra Scorpio N"
+    - link "Mahindra Scorpio N":
+      - /url: /mahindra-cars/scorpio-n
+    - text: Rs. 13.69 Lakh
+  - listitem:
+    - img "Tata Nexon"
+    - link "Tata Nexon":
+      - /url: /tata-cars/nexon
+    - text: Rs. 7.40 Lakh
+  - listitem:
+    - img "Tata Punch"
+    - link "Tata Punch":
+      - /url: /tata-cars/punch
+    - text: Rs. 5.70 Lakh
+  - listitem:
+    - img "Mahindra Scorpio"
+    - link "Mahindra Scorpio":
+      - /url: /mahindra-cars/scorpio-classic
+    - text: Rs. 13.37 Lakh
+- heading "New Cars By Fuel Type" [level=2]
+- list:
+  - listitem: Best Mileage
+  - listitem: Electric
+  - listitem: CNG
+  - listitem: Hybrid
+- list:
+  - listitem:
+    - img "Maruti Wagon R tour"
+    - link "Maruti Wagon R tour":
+      - /url: /maruti-suzuki-cars/wagon-r-tour
+    - text: Rs. 4.99 Lakh 34 kmpl
+  - listitem:
+    - img "Maruti Celerio"
+    - link "Maruti Celerio":
+      - /url: /maruti-suzuki-cars/celerio
+    - text: Rs. 4.70 Lakh 34 kmpl
+  - listitem:
+    - img "Maruti Dzire Tour S"
+    - link "Maruti Dzire Tour S":
+      - /url: /maruti-suzuki-cars/dzire-tour-s
+    - text: Rs. 6.24 Lakh 34 kmpl
+  - listitem:
+    - img "Maruti Wagon R"
+    - link "Maruti Wagon R":
+      - /url: /maruti-suzuki-cars/wagon-r
+    - text: Rs. 4.99 Lakh 34 kmpl
+  - listitem:
+    - img "Maruti Alto K10"
+    - link "Maruti Alto K10":
+      - /url: /maruti-suzuki-cars/alto-k10
+    - text: Rs. 3.70 Lakh 33 kmpl
+  - listitem:
+    - img "Maruti Dzire"
+    - link "Maruti Dzire":
+      - /url: /maruti-suzuki-cars/dzire
+    - text: Rs. 6.31 Lakh 33 kmpl
+  - listitem:
+    - img "Maruti Alto Tour H1"
+    - link "Maruti Alto Tour H1":
+      - /url: /maruti-suzuki-cars/alto-tour-h1
+    - text: Rs. 4.00 Lakh 33 kmpl
+  - listitem:
+    - img "Maruti Swift"
+    - link "Maruti Swift":
+      - /url: /maruti-suzuki-cars/swift
+    - text: Rs. 5.84 Lakh 32 kmpl
+  - listitem:
+    - img "Maruti S-Presso"
+    - link "Maruti S-Presso":
+      - /url: /maruti-suzuki-cars/s-presso
+    - text: Rs. 3.50 Lakh 32 kmpl
+  - listitem:
+    - img "Kia Sonet"
+    - link "Kia Sonet":
+      - /url: /kia-cars/sonet
+    - text: Rs. 7.41 Lakh 24 kmpl
+- heading "New Cars By Body Type" [level=2]
+- list:
+  - listitem: SUV
+  - listitem: Hatchback
+  - listitem: Sedan
+  - listitem: MUV
+  - listitem: Luxury
+- list:
+  - listitem:
+    - img "Maruti Brezza"
+    - link "Maruti Brezza":
+      - /url: /maruti-suzuki-cars/brezza
+    - text: Rs. 7.40 Lakh
+  - listitem:
+    - img "Mahindra Scorpio N"
+    - link "Mahindra Scorpio N":
+      - /url: /mahindra-cars/scorpio-n
+    - text: Rs. 13.69 Lakh
+  - listitem:
+    - img "Tata Nexon"
+    - link "Tata Nexon":
+      - /url: /tata-cars/nexon
+    - text: Rs. 7.40 Lakh
+  - listitem:
+    - img "Tata Punch"
+    - link "Tata Punch":
+      - /url: /tata-cars/punch
+    - text: Rs. 5.70 Lakh
+  - listitem:
+    - img "Mahindra Scorpio"
+    - link "Mahindra Scorpio":
+      - /url: /mahindra-cars/scorpio-classic
+    - text: Rs. 13.37 Lakh
+- insertion
+- heading "Popular Cars Comparison" [level=2]
+- list:
+  - listitem:
+    - img "Maruti Suzuki Grand Vitara"
+    - text: Maruti Suzuki Grand Vitara Rs. 10.77 Lakh vs
+    - img "Toyota Urban Cruiser Hyryder"
+    - text: Toyota Hyryder Rs. 11.31 Lakh
+    - link "Grand Vitara vs Hyryder":
+      - /url: /compare-cars/maruti-suzuki-grand-vitara-vs-toyota-hyryder
+  - listitem:
+    - img "Maruti Suzuki Baleno"
+    - text: Maruti Suzuki Baleno Rs. 5.99 Lakh vs
+    - img "Maruti Suzuki FRONX"
+    - text: Maruti Suzuki FRONX Rs. 6.85 Lakh
+    - link "Baleno vs FRONX":
+      - /url: /compare-cars/maruti-suzuki-baleno-vs-maruti-suzuki-fronx
+  - listitem:
+    - img "Hyundai Creta"
+    - text: Hyundai Creta Rs. 10.91 Lakh vs
+    - img "Kia Seltos"
+    - text: Kia Seltos Rs. 11.00 Lakh
+    - link "Creta vs Seltos":
+      - /url: /compare-cars/hyundai-creta-vs-kia-seltos
+  - listitem:
+    - img "Maruti Suzuki FRONX"
+    - text: Maruti Suzuki FRONX Rs. 6.85 Lakh vs
+    - img "Maruti Suzuki Brezza"
+    - text: Maruti Suzuki Brezza Rs. 7.40 Lakh
+    - link "FRONX vs Brezza":
+      - /url: /compare-cars/maruti-suzuki-brezza-vs-maruti-suzuki-fronx
+  - listitem:
+    - img "Maruti Suzuki Baleno"
+    - text: Maruti Suzuki Baleno Rs. 5.99 Lakh vs
+    - img "Toyota Glanza"
+    - text: Toyota Glanza Rs. 6.73 Lakh
+    - link "Baleno vs Glanza":
+      - /url: /compare-cars/maruti-suzuki-baleno-vs-toyota-glanza
+  - listitem:
+    - img "Maruti Suzuki Brezza"
+    - text: Maruti Suzuki Brezza Rs. 7.40 Lakh vs
+    - img "Hyundai Venue"
+    - text: Hyundai Venue Rs. 8.00 Lakh
+    - link "Brezza vs Venue":
+      - /url: /compare-cars/hyundai-venue-vs-maruti-suzuki-brezza
+  - listitem:
+    - img "Tata Nexon"
+    - text: Tata Nexon Rs. 7.40 Lakh vs
+    - img "Maruti Suzuki Brezza"
+    - text: Maruti Suzuki Brezza Rs. 7.40 Lakh
+    - link "Nexon vs Brezza":
+      - /url: /compare-cars/maruti-suzuki-brezza-vs-tata-nexon
+  - listitem:
+    - img "Maruti Suzuki Baleno"
+    - text: Maruti Suzuki Baleno Rs. 5.99 Lakh vs
+    - img "Maruti Suzuki Swift"
+    - text: Maruti Suzuki Swift Rs. 5.84 Lakh
+    - link "Baleno vs Swift":
+      - /url: /compare-cars/maruti-suzuki-baleno-vs-maruti-suzuki-swift
+  - listitem:
+    - img "Toyota Rumion"
+    - text: Toyota Rumion Rs. 9.79 Lakh vs
+    - img "Maruti Suzuki Ertiga Tour"
+    - text: Maruti Suzuki Ertiga Tour Rs. 9.68 Lakh
+    - link "Rumion vs Ertiga Tour":
+      - /url: /compare-cars/maruti-suzuki-ertiga-tour-vs-toyota-rumion
+  - listitem:
+    - img "Tata Punch"
+    - text: Tata Punch Rs. 5.70 Lakh vs
+    - img "Tata Tiago"
+    - text: Tata Tiago Rs. 4.70 Lakh
+    - link "Punch vs Tiago":
+      - /url: /compare-cars/tata-punch-vs-tata-tiago
+- link "Compare More Cars":
+  - /url: /compare-cars
+- heading "New Bikes And Scooters in India" [level=2]
+- list:
+  - listitem: Best Mileage
+  - listitem: Popular
+  - listitem: Latest
+  - listitem: Upcoming
+  - listitem: Scooters
+  - listitem: Electric
+- list:
+  - listitem:
+    - img "Hero Super Splendor XTEC"
+    - link "Hero Super Splendor XTEC":
+      - /url: /hero-bikes/super-splendor-xtec/
+    - text: Rs. 84,448 72 kmpl
+  - listitem:
+    - img "Hero Passion Plus"
+    - link "Hero Passion Plus":
+      - /url: /hero-bikes/passion-plus/
+    - text: Rs. 80,328 71 kmpl
+  - listitem:
+    - img "Hero Splendor Plus"
+    - link "Hero Splendor Plus":
+      - /url: /hero-bikes/splendor-plus/
+    - text: Rs. 77,777 70 kmpl
+  - listitem:
+    - img "Hero Splendor Plus XTEC"
+    - link "Hero Splendor Plus XTEC":
+      - /url: /hero-bikes/splendor-plus-xtec/
+    - text: Rs. 81,283 70 kmpl
+  - listitem:
+    - img "Hero HF Deluxe"
+    - link "Hero HF Deluxe":
+      - /url: /hero-bikes/hf-deluxe/
+    - text: Rs. 59,477 70 kmpl
+  - listitem:
+    - img "Bajaj Platina 110"
+    - link "Bajaj Platina 110":
+      - /url: /bajaj-bikes/platina/
+    - text: Rs. 75,797 70 kmpl
+  - listitem:
+    - img "Bajaj Platina 100"
+    - link "Bajaj Platina 100":
+      - /url: /bajaj-bikes/platina-100/
+    - text: Rs. 72,942 70 kmpl
+  - listitem:
+    - img "Bajaj CT 110X"
+    - link "Bajaj CT 110X":
+      - /url: /bajaj-bikes/ct110/
+    - text: Rs. 74,930 70 kmpl
+  - listitem:
+    - img "Honda Livo"
+    - link "Honda Livo":
+      - /url: /honda-bikes/livo/
+    - text: Rs. 80,330 70 kmpl
+  - listitem:
+    - img "Hero HF Deluxe Pro"
+    - link "Hero HF Deluxe Pro":
+      - /url: /hero-bikes/hf-deluxe-pro/
+    - text: Rs. 72,620 70 kmpl
+- heading "New Bikes By Body Type" [level=2]
+- list:
+  - listitem: Sports
+  - listitem: Cruiser
+  - listitem: Off Road
+  - listitem: Commuter
+- list:
+  - listitem:
+    - img "TVS Raider"
+    - link "TVS Raider":
+      - /url: /tvs-bikes/raider/
+    - text: Rs. 83,410
+  - listitem:
+    - img "Yamaha R15 V4"
+    - link "Yamaha R15 V4":
+      - /url: /yamaha-bikes/r15-v4/
+    - text: Rs. 1.75 Lakh
+  - listitem:
+    - img "Yamaha MT 15 Version 2.0"
+    - link "Yamaha MT 15 Version 2.0":
+      - /url: /yamaha-bikes/mt-15/
+    - text: Rs. 1.66 Lakh
+  - listitem:
+    - img "Bajaj Pulsar N160 S"
+    - link "Bajaj Pulsar N160 S":
+      - /url: /bajaj-bikes/pulsar-n160-s/
+    - text: Rs. 1.34 Lakh
+  - listitem:
+    - img "Bajaj Pulsar NS200"
+    - link "Bajaj Pulsar NS200":
+      - /url: /bajaj-bikes/pulsar-200ns/
+    - text: Rs. 1.38 Lakh
+- heading "Popular Bikes Comparison" [level=2]
+- list:
+  - listitem:
+    - img "TVS iQube S"
+    - text: TVS iQube S Rs. 1.65 Lakh vs
+    - img "Bajaj Chetak"
+    - text: Bajaj Chetak Rs. 1.19 Lakh
+    - link "iQube S vs Chetak":
+      - /url: /bike-comparison/bajaj-chetak-vs-tvs-iqube-s
+  - listitem:
+    - img "Honda Activa 125"
+    - text: Honda Activa 125 Rs. 89,656 vs
+    - img "TVS Jupiter"
+    - text: TVS Jupiter Rs. 73,975
+    - link "Activa 125 vs Jupiter":
+      - /url: /bike-comparison/honda-activa-125-vs-tvs-jupiter
+  - listitem:
+    - img "Royal Enfield Hunter 350"
+    - text: Royal Enfield Hunter 350 Rs. 1.38 Lakh vs
+    - img "TVS Ronin"
+    - text: TVS Ronin Rs. 1.30 Lakh
+    - link "Hunter 350 vs Ronin":
+      - /url: /bike-comparison/royal-enfield-hunter-vs-tvs-ronin
+  - listitem:
+    - img "Royal Enfield Classic 350"
+    - text: Royal Enfield Classic 350 Rs. 1.87 Lakh vs
+    - img "Royal Enfield Hunter 350"
+    - text: Royal Enfield Hunter 350 Rs. 1.38 Lakh
+    - link "Classic 350 vs Hunter 350":
+      - /url: /bike-comparison/royal-enfield-classic-350-vs-royal-enfield-hunter
+  - listitem:
+    - img "Bajaj Pulsar NS160"
+    - text: Bajaj Pulsar NS160 Rs. 1.26 Lakh vs
+    - img "Bajaj Pulsar N160"
+    - text: Bajaj Pulsar N160 Rs. 1.16 Lakh
+    - link "Pulsar NS160 vs Pulsar N160":
+      - /url: /bike-comparison/bajaj-pulsar-150ns-vs-bajaj-pulsar-n160
+  - listitem:
+    - img "Hero Splendor Plus"
+    - text: Hero Moto Corp Splendor Plus Rs. 77,777 vs
+    - img "Hero HF Deluxe"
+    - text: Hero Moto Corp HF Deluxe Rs. 59,477
+    - link "Splendor Plus vs HF Deluxe":
+      - /url: /bike-comparison/hero-hf-deluxe-vs-hero-splendor-plus
+  - listitem:
+    - img "Honda Shine"
+    - text: Honda Shine Rs. 82,722 vs
+    - img "Honda SP 125"
+    - text: Honda SP125 Rs. 89,748
+    - link "Shine vs SP125":
+      - /url: /bike-comparison/honda-cb-shine-vs-honda-sp125
+  - listitem:
+    - img "TVS iQube S"
+    - text: TVS iQube S Rs. 1.65 Lakh vs
+    - img "TVS Orbiter"
+    - text: TVS Orbiter Rs. 95,250
+    - link "iQube S vs Orbiter":
+      - /url: /bike-comparison/tvs-iqube-s-vs-tvs-orbiter
+  - listitem:
+    - img "TVS Raider"
+    - text: TVS Raider Rs. 83,410 vs
+    - img "Hero Xtreme 125R"
+    - text: Hero Moto Corp Xtreme 125R Rs. 91,500
+    - link "Raider vs Xtreme 125R":
+      - /url: /bike-comparison/hero-xtreme-125r-vs-tvs-raider
+  - listitem:
+    - img "Honda SP 125"
+    - text: Honda SP125 Rs. 89,748 vs
+    - img "Hero Glamour X 125"
+    - text: Hero Moto Corp Glamour X 125 Rs. 88,517
+    - link "SP125 vs Glamour X 125":
+      - /url: /bike-comparison/hero-glamour-x-125-vs-honda-sp125
+- link "Compare More Bikes":
+  - /url: /bikes/comparison
+- heading "Latest User Reviews" [level=2]
+- list:
+  - listitem:
+    - text: Bajaj Pulsar 150 5.0 6 reviews Very good bike
+    - paragraph: Bajaj pulsar is a very nice bike, and old model is a very powerful and looking good.
+    - text: 0 Share Sunil 2 hours ago
+  - listitem:
+    - text: Yamaha FZ-FI V3 4.2 258 reviews For daily city commuter
+    - paragraph: For daily city commuter bike is okay but lack of power and pickup, power should be around 15 bhp after 100km/h bike struggle in accordance sweet, stop under 80km/h after 80 more vibration start, mileage is good 153km/l some time i received 50 also but on full throttle, i received 44 only which is fair enough because I was on full throttle with pillion passanger that time I received 44 km/l.
+    - text: Read More 0 Share Vinay Jangir 10 hours ago
+  - listitem:
+    - text: Honda Activa 4.0 1367 reviews Good Activa
+    - paragraph: The Honda Activa is the ultimate daily commuter—incredibly reliable, fuel-efficient, and easy to ride through heavy city traffic with ultra-smooth engine refinement and long-lasting durability.
+    - text: 0 Share Anonymous 1 day ago
+  - listitem:
+    - text: Bajaj Pulsar 125 4.7 3 reviews Fantastic bike
+    - paragraph: I have driven old pulsar bike many years and its give me smooth driven experience and stability. Pulsar bikes are very good for daily office routine.
+    - text: 1 Share Vikas 17 hours ago
+  - listitem:
+    - text: Simple Ultra 2 reviews Super and excellent EV vehicle
+    - paragraph: Simple energy ev vehicle is very nice and supar. 2 hr charging and 400 km range. In India, most popular vehicle.
+    - text: 0 Share Venkey 1 day ago
+  - listitem:
+    - text: Suzuki Access 125 4.4 178 reviews Very Reliable
+    - paragraph: We are using this scooty from last 7 year and it is very reliable scooty for long term. It gave mileage around 50+ kmpl. I like it.
+    - text: 0 Share Arun 1 day ago
+  - listitem:
+    - text: Bajaj Discover 110 4.0 97 reviews Excellent bike
+    - paragraph: Excellent experience to drive this bike. It is petrol bike and 1st owner of this vehicle. I love my bike.
+    - text: 0 Share Dhaval 1 day ago
+  - listitem:
+    - text: Bajaj Platina 100 4.0 450 reviews Good reliable and having good mileage
+    - paragraph: Reliable. Having good mileage and good build quality. It is really very good product from Bajaj. I like it.
+    - text: 0 Share India 2 days ago
+  - listitem:
+    - text: Yakuza Rubie 5.0 3 reviews I own this scooty
+    - paragraph: This scooty is good for daily use and in village also. I love this scooty and there is so many functions in this scooty.
+    - text: 0 Share Himanshu 2 days ago
+  - listitem:
+    - text: Yakuza Rubie 5.0 3 reviews Right way every where Rubie
+    - paragraph: Any time it's best service helps to everyone, and make it easier, very good feeling and excellent service. I like this bike very much.
+    - text: 0 Share Nagamani 2 days ago
+- link "Read All Reviews":
+  - /url: /user-reviews
+- link "Review and Win Banner":
+  - /url: javascript:;
+  - img "Review and Win Banner"
+- img "Largest Community of Car and Bike Owners"
+- heading "Join the Zigwheels Community NEW" [level=4]
+- paragraph: India's largest automotive community
+- list:
+  - listitem:
+    - link "Explore Now":
+      - /url: /community
+- heading "Last Month Top Contributors" [level=3]
+- list:
+  - listitem:
+    - img "userProfile"
+    - img "crown"
+    - text: Lotus 2 Reviews 0 Likes
+  - listitem:
+    - img "userProfile"
+    - img "crown"
+    - text: H 1 Reviews 0 Likes
+  - listitem:
+    - img "userProfile"
+    - img "crown"
+    - text: Pawan 1 Reviews 0 Likes
+  - listitem: View More
+- heading "Latest Questions and Answers" [level=2]
+- textbox "Have a question in mind":
+  - /placeholder: Type your question
+- text: Q. GPS and live location available
+- list:
+  - listitem: "Yes, the Kia Carens Clavis offers navigation and live-tracking features on supported variants. However, feature availability may vary depending on the variant selected. You can click on the following link to check the detailed specifications and features of the Kia Carens Clavis: https://www.zigwheels.com/kia-cars/carens-clavis/specifications/"
+- text: Q. 2026 honda unicorn 160cc
+- list:
+  - listitem: "The 2026 Honda Unicorn is available with a 162cc engine, offering a good balance of performance and everyday practicality. You can check the bike’s complete engine specifications, features, dimensions, mileage, and other details by clicking on the following link: https://www.zigwheels.com/honda-bikes/unicorn/"
+- text: Q. Which camo edition is now available in showroom ambala?
+- list:
+  - listitem: "Tata Motors does not currently offer a dedicated Camo Edition for the Tata Curvv. However, the Curvv is available in 6 colour options: Flame Red with Dual-Tone, Gold Essence with Dual-Tone, Nitro Crimson with Dual-Tone, Opera Blue with Dual-Tone, Pristine White with Dual-Tone, and Pure Grey with Dual-Tone. We recommend contacting the nearest Tata Motors dealership, as colour availability may vary depending on the location and available stock. You may click on the following link to find Tata dealerships in Ambala: https://www.zigwheels.com/dealers/tata/Ambala"
+- text: More Questions
+- heading "Used Cars in India" [level=2]
+- list:
+  - listitem:
+    - link "New Delhi":
+      - /url: /used-car/Delhi
+  - listitem:
+    - link "Bengaluru":
+      - /url: /used-car/Bangalore
+  - listitem:
+    - link "Mumbai":
+      - /url: /used-car/Mumbai
+  - listitem:
+    - link "Kolkata":
+      - /url: /used-car/Kolkata
+  - listitem:
+    - link "Chennai":
+      - /url: /used-car/Chennai
+  - listitem:
+    - link "Pune":
+      - /url: /used-car/Pune
+  - listitem:
+    - link "Patna":
+      - /url: /used-car/Patna
+  - listitem:
+    - link "Jaipur":
+      - /url: /used-car/Jaipur
+  - listitem:
+    - link "Ahmedabad":
+      - /url: /used-car/Ahmedabad
+  - listitem:
+    - link "Hyderabad":
+      - /url: /used-car/Hyderabad
+- textbox "Search your City"
+- contentinfo:
+  - list:
+    - listitem:
+      - link "About Us":
+        - /url: /aboutus
+    - listitem: Advertise with us
+    - listitem:
+      - link "contact us":
+        - /url: /contactus
+  - list:
+    - listitem:
+      - link "Terms of use":
+        - /url: /termsofuse
+    - listitem:
+      - link "privacy policy":
+        - /url: /privacypolicy
+    - listitem: feedback
+  - img "zig-logo"
+  - list:
+    - listitem:
+      - link "":
+        - /url: https://www.facebook.com/zigwheels
+    - listitem:
+      - link "":
+        - /url: https://x.com/zigwheels
+    - listitem:
+      - link "":
+        - /url: https://www.youtube.com/channel/UCjmjWp38PCg15Z5ZS-tmpfw
+    - listitem:
+      - link "":
+        - /url: https://www.instagram.com/zigwheels
+    - listitem:
+      - link "":
+        - /url: https://in.linkedin.com/company/zigwheels
+  - text: Download ZigWheels app 4.6  User Rating 10 Lakh+ Download
+  - img "appimg"
+  - img "appimg"
+  - text: © 2008-2026 Girnar Software Pvt. Ltd. All rights Reserved.
+- list:
+  - listitem: Hyundai Creta
+  - listitem: Hyundai Creta Electric
+  - listitem: Hyundai Creta N Line
+  - listitem: Hyundai Creta 2026
+  - listitem: Creta On-Road Price
+  - listitem: Creta Electric On-Road Price
+  - listitem: Creta N Line On-Road Price
+  - listitem: Creta Pictures
+  - listitem: Used Creta Cars
+```
+
+# Test source
+
+```ts
+  1  | //import{test,expect} from '@playwright/test';
+  2  | //import { HomePage } from '../Pages/HomePage';
+  3  | //import { NewCarsPage } from '../Pages/NewCarsPage';
+  4  | import { test, expect } from '../utils/test-base';
+  5  | //import {readCSVData} from '../utils/readCSV';
+  6  | 
+  7  | test.describe('Find Latest Cars', () => {
+  8  | //let homePage: HomePage;
+  9  | //let newCarsPage: NewCarsPage;
+  10 | 
+  11 | test.beforeEach(async ({ pages }) => {
+  12 | //homePage = new HomePage(page);
+  13 | //newCarsPage = new NewCarsPage(page);
+  14 | await pages.homePage.navigateTo();
+  15 | 
+  16 | });
+  17 | //const testData = readCSVData('test-data/cars.csv');
+  18 | test('Parametrized Find Latest Cars', async ({ pages }) => {
+  19 |   await pages.homePage.findLatestCars();
+  20 | 
+  21 |   await expect(pages.page).toHaveURL(/.*newcars.*/);
+  22 | 
+  23 |   const headingText = await pages.newCarsPage.getHeadingText();
+  24 |   console.log(headingText);
+  25 | 
+  26 |   expect(headingText).toContain('New Cars');
+  27 | 
+  28 |   await pages.newCarsPage.gotoHyundaiCars();
+  29 |  await expect(pages.page).toHaveURL(/.*hyundai-cars.*/);
+  30 | });
+  31 | 
+  32 | test('Verify Logo', async ({ pages }) => {
+  33 |   await pages.homePage.verifyLogo();
+  34 | 
+  35 | });
+  36 | test('Verify New Cars Menu', async ({ pages }) => {
+  37 |   await pages.homePage.verifyNewCarsMenu();
+  38 |   
+  39 | });
+  40 | 
+  41 | test('Verify New Cars Sub Menu', async ({ pages }) => {
+  42 |   await pages.homePage.hoverCarMenu();
+  43 |   await pages.homePage.verifyNewCarsSubMenu();
+  44 |   await pages.homePage.clickSearchNewCars();
+  45 |   await expect(pages.page).toHaveURL(/.*newcars.*/);
+  46 | })
+  47 | 
+  48 | // negative test case
+  49 | test('Verify New Cars Sub Menu Not Visible', async ({ pages }) => {
+  50 |   await pages.homePage.navigateTo();
+  51 |   await pages.homePage.verifyNewCarsSubMenuNotVisible();
+  52 | });
+  53 | test('SEARCH-001 Verify valid car search', async ({ pages }) => {
+  54 | 
+  55 |     await pages.homePage.navigateTo();
+  56 | 
+  57 |     await pages.homePage.searchCar('Hyundai Creta');
+  58 |     //await pages.homePage.searchCar.click();
+> 59 |     await expect(pages.page).toHaveURL(/hyundai-cars\/creta/);
+     |                              ^ Error: expect(page).toHaveURL(expected) failed
+  60 | 
+  61 | });
+  62 | });
+```

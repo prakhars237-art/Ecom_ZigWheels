@@ -1,0 +1,3 @@
+newCarsMenu: //span[normalize-space()='NEW CARS']
+findNewCars: //a[contains(@href,'/newcars') and normalize-space()='Search New Cars']
+Promise { <pending> }

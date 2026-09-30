@@ -1,0 +1,1048 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: findlatestcars.spec.ts >> Find Latest Cars >> Find Latest Cars
+- Location: tests\findlatestcars.spec.ts:17:5
+
+# Error details
+
+```
+TypeError: received is not iterable
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic:
+        - generic [ref=e4]:
+          - generic: 
+          - link "Home" [ref=e5] [cursor=pointer]:
+            - /url: /
+            - img "Home" [ref=e6]
+          - text: 
+          - generic: 
+          - text:  
+        - navigation [ref=e8]:
+          - list [ref=e9]:
+            - listitem [ref=e10]:
+              - generic [ref=e11] [cursor=pointer]:
+                - generic: 
+                - text: NEWS & REVIEWS
+            - listitem [ref=e12]:
+              - generic [ref=e13] [cursor=pointer]:
+                - generic: 
+                - text: NEW CARS
+            - listitem [ref=e14]:
+              - generic [ref=e15] [cursor=pointer]:
+                - generic: 
+                - text: NEW BIKES
+            - listitem [ref=e16]:
+              - generic [ref=e17] [cursor=pointer]:
+                - generic: 
+                - text: SCOOTERS
+            - listitem [ref=e18]:
+              - generic [ref=e19] [cursor=pointer]:
+                - generic: 
+                - text: MORE
+        - generic [ref=e21]:
+          - textbox "Creta, Community, On Road Price, Ola S1, TVS Bikes" [ref=e22]:
+            - /placeholder: Search car or bike
+          - button "" [ref=e23] [cursor=pointer]
+        - generic [ref=e29] [cursor=pointer]: 
+  - generic [ref=e33]: Ad
+  - generic [ref=e34]:
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - heading "New Cars" [level=1] [ref=e37]
+        - generic [ref=e40]:
+          - paragraph [ref=e41]: The most popular new cars in India 2026 includes Tata Tiago(Rs. 4.70 Lakh), Tata Punch(Rs. 5.65 Lakh), Tata Sierra(Rs. 11.49 Lakh), Tata Tiago EV(Rs. 6.99 Lakh) and Maruti FRONX(Rs. 6.85 Lakh).
+          - group:
+            - generic "... Read More" [ref=e42] [cursor=pointer]:
+              - generic [ref=e43]: ...
+              - generic [ref=e44]: Read More
+        - generic [ref=e45]:
+          - list [ref=e50]:
+            - listitem [ref=e51] [cursor=pointer]: Popular
+            - listitem [ref=e52] [cursor=pointer]: Latest
+            - listitem [ref=e53] [cursor=pointer]: Upcoming
+          - generic [ref=e56]:
+            - heading "Popular Cars in India" [level=2] [ref=e57]
+            - list [ref=e62]:
+              - listitem [ref=e63]:
+                - img "Tata Tiago" [ref=e64] [cursor=pointer]
+                - generic [ref=e65]:
+                  - link "Tata Tiago" [ref=e66] [cursor=pointer]:
+                    - /url: /tata-cars/tiago
+                  - generic [ref=e67]: Rs. 4.70 Lakh
+              - listitem [ref=e68]:
+                - img "Tata Punch" [ref=e69] [cursor=pointer]
+                - generic [ref=e70]:
+                  - link "Tata Punch" [ref=e71] [cursor=pointer]:
+                    - /url: /tata-cars/punch
+                  - generic [ref=e72]: Rs. 5.65 Lakh
+              - listitem [ref=e73]:
+                - img "Tata Sierra" [ref=e74] [cursor=pointer]
+                - generic [ref=e75]:
+                  - link "Tata Sierra" [ref=e76] [cursor=pointer]:
+                    - /url: /tata-cars/sierra
+                  - generic [ref=e77]: Rs. 11.49 Lakh
+              - listitem [ref=e78]:
+                - img "Tata Tiago EV" [ref=e79] [cursor=pointer]
+                - generic [ref=e80]:
+                  - link "Tata Tiago EV" [ref=e81] [cursor=pointer]:
+                    - /url: /tata-cars/tiago-ev
+                  - generic [ref=e82]: Rs. 6.99 Lakh
+              - listitem [ref=e83]:
+                - img "Maruti FRONX" [ref=e84] [cursor=pointer]
+                - generic [ref=e85]:
+                  - link "Maruti FRONX" [ref=e86] [cursor=pointer]:
+                    - /url: /maruti-suzuki-cars/fronx
+                  - generic [ref=e87]: Rs. 6.85 Lakh
+      - generic [ref=e89]:
+        - generic [ref=e90]:
+          - heading "Browse Cars By Budget" [level=2] [ref=e92] [cursor=pointer]
+          - generic [ref=e94]:
+            - generic:
+              - link "Cars under 4 Lakh" [ref=e95] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/cars-under-4-lakhs
+              - link "Cars under 6 Lakh" [ref=e96] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/cars-under-6-lakhs
+              - link "Cars under 10 Lakh" [ref=e97] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/cars-under-10-lakhs
+              - link "Cars under 15 Lakh" [ref=e98] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/cars-under-15-lakhs
+              - link "Cars under 20 Lakh" [ref=e99] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/cars-under-20-lakhs
+              - link "Cars under 40 Lakh" [ref=e100] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/cars-under-40-lakhs
+              - link "Cars above 40 Lakh" [ref=e101] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/cars-above-40-lakhs
+        - generic [ref=e102]:
+          - heading "Browse Cars By Body Type" [level=2] [ref=e104] [cursor=pointer]
+          - generic [ref=e106]:
+            - generic:
+              - link "SUV" [ref=e107] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/best-suv-cars
+              - link "Hatchback" [ref=e108] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/best-hatchback-cars
+              - link "Sedan" [ref=e109] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/best-sedan-cars
+              - link "MUV" [ref=e110] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/best-muv-cars
+              - link "Luxury" [ref=e111] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/best-luxury-cars
+              - link "Safest" [ref=e112] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/safest-cars
+              - link "Fastest" [ref=e113] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/fastest-cars
+        - generic [ref=e114]:
+          - heading "Browse Cars By Fuel Type" [level=2] [ref=e116] [cursor=pointer]
+          - generic [ref=e118]:
+            - generic:
+              - link "Diesel" [ref=e119] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/best-diesel-cars
+              - link "Petrol" [ref=e120] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/best-petrol-cars
+              - link "CNG" [ref=e121] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/best-cng-cars
+              - link "Electric" [ref=e122] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/electric-cars
+              - link "Hybrid" [ref=e123] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/hybrid-cars
+        - generic [ref=e124]:
+          - heading "Browse Cars By Seating Capacity" [level=2] [ref=e126] [cursor=pointer]
+          - generic [ref=e128]:
+            - generic:
+              - link "2 Seater" [ref=e129] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/2-seater-cars
+              - link "4 Seater" [ref=e130] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/4-seater-cars
+              - link "5 Seater" [ref=e131] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/5-seater-cars
+              - link "6 Seater" [ref=e132] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/6-seater-cars
+              - link "7 Seater" [ref=e133] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/7-seater-cars
+              - link "8 Seater" [ref=e134] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/8-seater-cars
+              - link "9 Seater" [ref=e135] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/9-seater-cars
+        - generic [ref=e136]:
+          - heading "Browse Cars By Transmission" [level=2] [ref=e138] [cursor=pointer]
+          - generic [ref=e140]:
+            - generic:
+              - link "Automatic" [ref=e141] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/best-automatic-cars
+              - link "Manual" [ref=e142] [cursor=pointer]:
+                - /url: https://www.zigwheels.com/newcars/best-manual-cars
+      - generic [ref=e143]:
+        - heading "Top Car Brands in India" [level=2] [ref=e144]
+        - list [ref=e150]:
+          - listitem [ref=e151]:
+            - link "Maruti Suzuki" [ref=e153] [cursor=pointer]:
+              - /url: /maruti-suzuki-cars
+              - img [ref=e154]
+              - generic [ref=e155]: Maruti Suzuki
+          - listitem [ref=e156]:
+            - link "Tata" [ref=e158] [cursor=pointer]:
+              - /url: /tata-cars
+              - img [ref=e159]
+              - generic [ref=e160]: Tata
+          - listitem [ref=e161]:
+            - link "Kia" [ref=e163] [cursor=pointer]:
+              - /url: /kia-cars
+              - img [ref=e164]
+              - generic [ref=e165]: Kia
+          - listitem [ref=e166]:
+            - link "Toyota" [ref=e168] [cursor=pointer]:
+              - /url: /toyota-cars
+              - img [ref=e169]
+              - generic [ref=e170]: Toyota
+          - listitem [ref=e171]:
+            - link "Hyundai" [ref=e173] [cursor=pointer]:
+              - /url: /hyundai-cars
+              - img [ref=e174]
+              - generic [ref=e175]: Hyundai
+          - listitem [ref=e176]:
+            - link "Mahindra" [ref=e178] [cursor=pointer]:
+              - /url: /mahindra-cars
+              - img [ref=e179]
+              - generic [ref=e180]: Mahindra
+          - listitem [ref=e181]:
+            - link "Honda" [ref=e183] [cursor=pointer]:
+              - /url: /honda-cars
+              - img [ref=e184]
+              - generic [ref=e185]: Honda
+          - listitem [ref=e186]:
+            - link "MG Motor" [ref=e188] [cursor=pointer]:
+              - /url: /mg-motor-cars
+              - img [ref=e189]
+              - generic [ref=e190]: MG Motor
+          - listitem [ref=e191]:
+            - link "Skoda" [ref=e193] [cursor=pointer]:
+              - /url: /skoda-cars
+              - img [ref=e194]
+              - generic [ref=e195]: Skoda
+          - listitem [ref=e196]:
+            - link "Jeep" [ref=e198] [cursor=pointer]:
+              - /url: /jeep-cars
+              - img [ref=e199]
+              - generic [ref=e200]: Jeep
+          - listitem [ref=e201]:
+            - link "Renault" [ref=e203] [cursor=pointer]:
+              - /url: /renault-cars
+              - img [ref=e204]
+              - generic [ref=e205]: Renault
+          - listitem [ref=e206]:
+            - link "Nissan" [ref=e208] [cursor=pointer]:
+              - /url: /nissan-cars
+              - img [ref=e209]
+              - generic [ref=e210]: Nissan
+          - listitem [ref=e211]:
+            - link "Volkswagen" [ref=e213] [cursor=pointer]:
+              - /url: /volkswagen-cars
+              - img [ref=e214]
+              - generic [ref=e215]: Volkswagen
+          - listitem [ref=e216]:
+            - link "Citroen" [ref=e218] [cursor=pointer]:
+              - /url: /citroen-cars
+              - img [ref=e219]
+              - generic [ref=e220]: Citroen
+          - listitem [ref=e221]:
+            - link "Aston Martin" [ref=e223] [cursor=pointer]:
+              - /url: /aston-martin-cars
+              - img [ref=e224]
+              - generic [ref=e225]: Aston Martin
+          - listitem [ref=e226]:
+            - link "Audi" [ref=e228] [cursor=pointer]:
+              - /url: /audi-cars
+              - img [ref=e229]
+              - generic [ref=e230]: Audi
+          - listitem [ref=e231]:
+            - link "Bajaj" [ref=e233] [cursor=pointer]:
+              - /url: /bajaj-cars
+              - img [ref=e234]
+              - generic [ref=e235]: Bajaj
+          - listitem [ref=e236]:
+            - link "Bentley" [ref=e238] [cursor=pointer]:
+              - /url: /bentley-cars
+              - img [ref=e239]
+              - generic [ref=e240]: Bentley
+          - listitem [ref=e241]:
+            - link "BMW" [ref=e243] [cursor=pointer]:
+              - /url: /bmw-cars
+              - img [ref=e244]
+              - generic [ref=e245]: BMW
+          - listitem [ref=e246]:
+            - link "BYD" [ref=e248] [cursor=pointer]:
+              - /url: /byd-cars
+              - img [ref=e249]
+              - generic [ref=e250]: BYD
+          - listitem [ref=e251]:
+            - link "Bugatti" [ref=e253] [cursor=pointer]:
+              - /url: /bugatti-cars
+              - img [ref=e254]
+              - generic [ref=e255]: Bugatti
+          - listitem [ref=e256]:
+            - link "Ferrari" [ref=e258] [cursor=pointer]:
+              - /url: /ferrari-cars
+              - img [ref=e259]
+              - generic [ref=e260]: Ferrari
+          - listitem [ref=e261]:
+            - link "Force Motors" [ref=e263] [cursor=pointer]:
+              - /url: /force-motors-cars
+              - img [ref=e264]
+              - generic [ref=e265]: Force Motors
+          - listitem [ref=e266]:
+            - link "ISUZU" [ref=e268] [cursor=pointer]:
+              - /url: /isuzu-cars
+              - img [ref=e269]
+              - generic [ref=e270]: ISUZU
+          - listitem [ref=e271]:
+            - link "Jaguar" [ref=e273] [cursor=pointer]:
+              - /url: /jaguar-cars
+              - img [ref=e274]
+              - generic [ref=e275]: Jaguar
+          - listitem [ref=e276]:
+            - link "Lamborghini" [ref=e278] [cursor=pointer]:
+              - /url: /lamborghini-cars
+              - img [ref=e279]
+              - generic [ref=e280]: Lamborghini
+          - listitem [ref=e281]:
+            - link "Land Rover" [ref=e283] [cursor=pointer]:
+              - /url: /land-rover-cars
+              - img [ref=e284]
+              - generic [ref=e285]: Land Rover
+          - listitem [ref=e286]:
+            - link "Lexus" [ref=e288] [cursor=pointer]:
+              - /url: /lexus-cars
+              - img [ref=e289]
+              - generic [ref=e290]: Lexus
+          - listitem [ref=e291]:
+            - link "Maserati" [ref=e293] [cursor=pointer]:
+              - /url: /maserati-cars
+              - img [ref=e294]
+              - generic [ref=e295]: Maserati
+          - listitem [ref=e296]:
+            - link "Mclaren" [ref=e298] [cursor=pointer]:
+              - /url: /mclaren-cars
+              - img [ref=e299]
+              - generic [ref=e300]: Mclaren
+          - listitem [ref=e301]:
+            - link "Mercedes Benz" [ref=e303] [cursor=pointer]:
+              - /url: /mercedes-benz-cars
+              - img [ref=e304]
+              - generic [ref=e305]: Mercedes Benz
+          - listitem [ref=e306]:
+            - link "MINI" [ref=e308] [cursor=pointer]:
+              - /url: /mini-cars
+              - img [ref=e309]
+              - generic [ref=e310]: MINI
+          - listitem [ref=e311]:
+            - link "Porsche" [ref=e313] [cursor=pointer]:
+              - /url: /porsche-cars
+              - img [ref=e314]
+              - generic [ref=e315]: Porsche
+          - listitem [ref=e316]:
+            - link "Mitsubishi" [ref=e318] [cursor=pointer]:
+              - /url: /mitsubishi-cars
+              - img [ref=e319]
+              - generic [ref=e320]: Mitsubishi
+          - listitem [ref=e321]:
+            - link "Rolls Royce" [ref=e323] [cursor=pointer]:
+              - /url: /rolls-royce-cars
+              - img [ref=e324]
+              - generic [ref=e325]: Rolls Royce
+          - listitem [ref=e326]:
+            - link "Tesla" [ref=e328] [cursor=pointer]:
+              - /url: /tesla-cars
+              - img [ref=e329]
+              - generic [ref=e330]: Tesla
+          - listitem [ref=e331]:
+            - link "Haval" [ref=e333] [cursor=pointer]:
+              - /url: /haval-cars
+              - img [ref=e334]
+              - generic [ref=e335]: Haval
+          - listitem [ref=e336]:
+            - link "VinFast" [ref=e338] [cursor=pointer]:
+              - /url: /vinfast-cars
+              - img [ref=e339]
+              - generic [ref=e340]: VinFast
+          - listitem [ref=e341]:
+            - link "Volvo" [ref=e343] [cursor=pointer]:
+              - /url: /volvo-cars
+              - img [ref=e344]
+              - generic [ref=e345]: Volvo
+          - listitem [ref=e346]:
+            - link "Peugeot" [ref=e348] [cursor=pointer]:
+              - /url: /peugeot-cars
+              - img [ref=e349]
+              - generic [ref=e350]: Peugeot
+          - listitem [ref=e351]:
+            - link "ORA" [ref=e353] [cursor=pointer]:
+              - /url: /ora-cars
+              - img [ref=e354]
+              - generic [ref=e355]: ORA
+      - generic [ref=e357]:
+        - heading "Search New Cars" [level=2] [ref=e359]
+        - generic "Advanced Search" [ref=e360] [cursor=pointer]: Advanced Search »
+        - generic [ref=e363]:
+          - generic:
+            - combobox [ref=e366] [cursor=pointer]:
+              - option "Select Make" [selected]
+              - option "Maruti Suzuki"
+              - option "Tata"
+              - option "Kia"
+              - option "Toyota"
+              - option "Hyundai"
+              - option "Mahindra"
+              - option "Honda"
+              - option "MG Motor"
+              - option "Skoda"
+              - option "Jeep"
+              - option "Renault"
+              - option "Nissan"
+              - option "Volkswagen"
+              - option "Citroen"
+              - option "Aston Martin"
+              - option "Audi"
+              - option "Bajaj"
+              - option "Bentley"
+              - option "Blinq"
+              - option "BMW"
+              - option "BYD"
+              - option "Bugatti"
+              - option "Ferrari"
+              - option "Force Motors"
+              - option "ISUZU"
+              - option "Jaguar"
+              - option "Lamborghini"
+              - option "Land Rover"
+              - option "Lexus"
+              - option "Lotus"
+              - option "Maserati"
+              - option "Mclaren"
+              - option "Mercedes Benz"
+              - option "MINI"
+              - option "PMV"
+              - option "Porsche"
+              - option "Pravaig"
+              - option "Mitsubishi"
+              - option "Rolls Royce"
+              - option "Strom Motors"
+              - option "Tesla"
+              - option "Vayve Mobility"
+              - option "Haval"
+              - option "VinFast"
+              - option "Volvo"
+              - option "Peugeot"
+              - option "OLA Electric"
+              - option "Fisker"
+              - option "ORA"
+            - combobox [ref=e369] [cursor=pointer]:
+              - option "Select Model" [selected]
+            - button "Search" [ref=e371] [cursor=pointer]
+      - generic [ref=e372]:
+        - heading "Quick Research" [level=3] [ref=e373]
+        - list [ref=e378]:
+          - listitem [ref=e379]:
+            - link "Compare Cars Compare Cars" [ref=e380] [cursor=pointer]:
+              - /url: /compare-cars
+              - img "Compare Cars" [ref=e381]
+              - generic [ref=e382]: Compare Cars
+          - listitem [ref=e383]:
+            - link "Car Dealers Car Dealers" [ref=e384] [cursor=pointer]:
+              - /url: /dealers
+              - img "Car Dealers" [ref=e385]
+              - generic [ref=e386]: Car Dealers
+          - listitem [ref=e387]:
+            - link "Offers & Discounts Offers & Discounts" [ref=e388] [cursor=pointer]:
+              - /url: /offers-events
+              - img "Offers & Discounts" [ref=e389]
+              - generic [ref=e390]: Offers & Discounts
+          - listitem [ref=e391]:
+            - link "Service Centers Service Centers" [ref=e392] [cursor=pointer]:
+              - /url: /service-centers
+              - img "Service Centers" [ref=e393]
+              - generic [ref=e394]: Service Centers
+          - listitem [ref=e395]:
+            - link "EMI Calculator EMI Calculator" [ref=e396] [cursor=pointer]:
+              - /url: /emi-calculator
+              - img "EMI Calculator" [ref=e397]
+              - generic [ref=e398]: EMI Calculator
+          - listitem [ref=e399]:
+            - link "Car Recommender Car Recommender" [ref=e400] [cursor=pointer]:
+              - /url: /newcars/find-your-perfect-car
+              - img "Car Recommender" [ref=e401]
+              - generic [ref=e402]: Car Recommender
+      - generic [ref=e403]:
+        - list [ref=e408]:
+          - listitem [ref=e409] [cursor=pointer]: Electric
+          - listitem [ref=e410] [cursor=pointer]: CNG
+          - listitem [ref=e411] [cursor=pointer]: Mileage
+        - generic [ref=e412]:
+          - generic [ref=e414]:
+            - heading "Electric Cars in India" [level=2] [ref=e415]
+            - generic [ref=e416]:
+              - list [ref=e420]:
+                - listitem [ref=e421]:
+                  - img "Tata Tiago EV" [ref=e422] [cursor=pointer]
+                  - generic [ref=e423]:
+                    - link "Tata Tiago EV" [ref=e424] [cursor=pointer]:
+                      - /url: /tata-cars/tiago-ev
+                    - generic [ref=e425]: Rs. 6.99 Lakh
+                    - generic [ref=e426]: 285 km
+                - listitem [ref=e427]:
+                  - img "Maruti e Vitara" [ref=e428] [cursor=pointer]
+                  - generic [ref=e429]:
+                    - link "Maruti e Vitara" [ref=e430] [cursor=pointer]:
+                      - /url: /maruti-suzuki-cars/e-vitara
+                    - generic [ref=e431]: Rs. 15.99 Lakh
+                    - generic [ref=e432]: 543 km
+                - listitem [ref=e433]:
+                  - img "Tata Punch EV" [ref=e434] [cursor=pointer]
+                  - generic [ref=e435]:
+                    - link "Tata Punch EV" [ref=e436] [cursor=pointer]:
+                      - /url: /tata-cars/punch-ev
+                    - generic [ref=e437]: Rs. 9.69 Lakh
+                    - generic [ref=e438]: 350 km
+                - listitem [ref=e439]:
+                  - img "Mahindra BE 6" [ref=e440] [cursor=pointer]
+                  - generic [ref=e441]:
+                    - link "Mahindra BE 6" [ref=e442] [cursor=pointer]:
+                      - /url: /mahindra-cars/be-6
+                    - generic [ref=e443]: Rs. 18.90 Lakh
+                    - generic [ref=e444]: 557 km
+                - listitem [ref=e445]:
+                  - img "Mahindra XEV 9e" [ref=e446] [cursor=pointer]
+                  - generic [ref=e447]:
+                    - link "Mahindra XEV 9e" [ref=e448] [cursor=pointer]:
+                      - /url: /mahindra-cars/xev-9e
+                    - generic [ref=e449]: Rs. 21.90 Lakh
+                    - generic [ref=e450]: 656 km
+                - listitem [ref=e451]:
+                  - img "MG Windsor EV" [ref=e452] [cursor=pointer]
+                  - generic [ref=e453]:
+                    - link "MG Windsor EV" [ref=e454] [cursor=pointer]:
+                      - /url: /mg-motor-cars/windsor-ev
+                    - generic [ref=e455]: Rs. 14.10 Lakh
+                    - generic [ref=e456]: 449 km
+                - listitem [ref=e457]:
+                  - img "Tata Nexon EV" [ref=e458] [cursor=pointer]
+                  - generic [ref=e459]:
+                    - link "Tata Nexon EV" [ref=e460] [cursor=pointer]:
+                      - /url: /tata-cars/nexon-ev
+                    - generic [ref=e461]: Rs. 12.49 Lakh
+                    - generic [ref=e462]: 489 km
+                - listitem [ref=e463]:
+                  - img "Tata Harrier EV" [ref=e464] [cursor=pointer]
+                  - generic [ref=e465]:
+                    - link "Tata Harrier EV" [ref=e466] [cursor=pointer]:
+                      - /url: /tata-cars/harrier-ev
+                    - generic [ref=e467]: Rs. 21.49 Lakh
+                    - generic [ref=e468]: 622 km
+                - listitem [ref=e469]:
+                  - img "MG Comet EV" [ref=e470] [cursor=pointer]
+                  - generic [ref=e471]:
+                    - link "MG Comet EV" [ref=e472] [cursor=pointer]:
+                      - /url: /mg-motor-cars/comet-ev
+                    - generic [ref=e473]: Rs. 7.60 Lakh
+                    - generic [ref=e474]: 230 km
+                - listitem [ref=e475]:
+                  - img "MG Cyberster" [ref=e476] [cursor=pointer]
+                  - generic [ref=e477]:
+                    - link "MG Cyberster" [ref=e478] [cursor=pointer]:
+                      - /url: /mg-motor-cars/cyberster
+                    - generic [ref=e479]: Rs. 75.00 Lakh
+                    - generic [ref=e480]: 580 km
+              - link "All Electric Cars" [ref=e483] [cursor=pointer]:
+                - /url: /newcars/electric-cars
+          - text: View All All
+      - generic [ref=e485]:
+        - heading "New Cars User Reviews" [level=2] [ref=e486]
+        - generic [ref=e487]:
+          - list [ref=e491]:
+            - listitem [ref=e492]:
+              - generic [ref=e494] [cursor=pointer]:
+                - generic [ref=e495]: Mahindra Scorpio N
+                - generic [ref=e496]: "4.5"
+                - text: 226 reviews
+              - generic [ref=e497]: Mahindra Scorpio N
+              - paragraph [ref=e499] [cursor=pointer]: This car is an absolute beast with incredible build quality that feels like a tank on the road. Its powerful engine offers fantastic pickup, Making highway overtaking effortless.The driving experience is commanding and smooth, Though the ride can feel a bit bouncy on rough roads. Expect a decent mileage of around 11–14 kmpl depending on conditions. Maintenance and service costs are quite reasonable for a massive, Feature-loaded, Premium suv of this segment.
+              - generic [ref=e500] [cursor=pointer]: Read More
+              - generic [ref=e502] [cursor=pointer]: "0"
+              - generic [ref=e505] [cursor=pointer]: Share
+              - generic [ref=e507] [cursor=pointer]:
+                - generic [ref=e508]: Rajesh Kumar
+                - generic [ref=e509]: 6 days ago
+            - listitem [ref=e510]:
+              - generic [ref=e512] [cursor=pointer]:
+                - generic [ref=e513]: Tata Tigor 2017-2020
+                - generic [ref=e514]: "4.3"
+                - text: 50 reviews
+              - generic [ref=e515]: Tata cars Tiago 2018 modle
+              - paragraph [ref=e517] [cursor=pointer]: Just an amazing car with economic mode and fuel efficiency and car can give u an unbelievable pickup with three cylinder rt rovern 1.2 ltr engine, it can do the best performance with pure + petrol and can fly upto 180 kmph as per odometer, 5 to 6 thin can travel to distance of 2 to 400 km s without any sitting problem driving seat lokks and feel like F1 sitting with comfort for everyone, just one problem with the engine vibration and it's feel on ideal and running condition tool.
+              - generic [ref=e518] [cursor=pointer]: Read More
+              - generic [ref=e520] [cursor=pointer]: "0"
+              - generic [ref=e523] [cursor=pointer]: Share
+              - generic [ref=e525] [cursor=pointer]:
+                - generic [ref=e526]: Xxx
+                - generic [ref=e527]: 1 week ago
+            - listitem [ref=e528]:
+              - generic [ref=e530] [cursor=pointer]:
+                - generic [ref=e531]: Mahindra Scorpio
+                - generic [ref=e532]: "4.4"
+                - text: 174 reviews
+              - generic [ref=e533]: This is car very Nice 👍
+              - paragraph [ref=e535] [cursor=pointer]: This is car very nice and i am very happy to purchase this car scorpio s 11 black colour with top model.
+              - generic [ref=e537] [cursor=pointer]: "0"
+              - generic [ref=e540] [cursor=pointer]: Share
+              - generic [ref=e542] [cursor=pointer]:
+                - generic [ref=e543]: Sumit
+                - generic [ref=e544]: 1 week ago
+            - listitem [ref=e545]:
+              - generic [ref=e547] [cursor=pointer]:
+                - generic [ref=e548]: MG Majestor
+                - generic [ref=e549]: "4.5"
+              - generic [ref=e550]: very good car daily
+              - paragraph [ref=e552] [cursor=pointer]: very good car daily use more than better toyota fortuner handling body roll leg room' head room, seating comfortable very nice only dct transmission, little bit long but, road safety is good, Adas very useful in city traffic and convenient and front look in road view is awesome, last point above 40 Lakh seagment value money.
+              - generic [ref=e553] [cursor=pointer]: Read More
+              - generic [ref=e555] [cursor=pointer]: "0"
+              - generic [ref=e558] [cursor=pointer]: Share
+              - generic [ref=e560] [cursor=pointer]:
+                - generic [ref=e561]: Arun Muthukumar
+                - generic [ref=e562]: 1 week ago
+            - listitem [ref=e563]:
+              - generic [ref=e565] [cursor=pointer]:
+                - generic [ref=e566]: Maruti Suzuki Swift
+                - generic [ref=e567]: "4.2"
+                - text: 163 reviews
+              - generic [ref=e568]: Best mileage
+              - paragraph [ref=e570] [cursor=pointer]: Good mileage fast pick-up, spare cost is cheap, maintenance is also very cheap smooth driving.
+              - generic [ref=e572] [cursor=pointer]: "0"
+              - generic [ref=e575] [cursor=pointer]: Share
+              - generic [ref=e577] [cursor=pointer]:
+                - generic [ref=e578]: Seven
+                - generic [ref=e579]: 1 week ago
+            - listitem [ref=e580]:
+              - generic [ref=e582] [cursor=pointer]:
+                - generic [ref=e583]: Mahindra Bolero Camper
+                - generic [ref=e584]: "4.2"
+                - text: 36 reviews
+              - generic [ref=e585]: Best in segment king of segment
+              - paragraph [ref=e587] [cursor=pointer]: Best product of Mahindra bolero need like zero maintenance. Rugged and very fun to drive.
+              - generic [ref=e589] [cursor=pointer]: "0"
+              - generic [ref=e592] [cursor=pointer]: Share
+              - generic [ref=e594] [cursor=pointer]:
+                - generic [ref=e595]: Funtoosh
+                - generic [ref=e596]: 1 week ago
+            - listitem [ref=e597]:
+              - generic [ref=e599] [cursor=pointer]:
+                - generic [ref=e600]: Tata Punch
+                - generic [ref=e601]: "4.6"
+                - text: 91 reviews
+              - generic [ref=e602]: Nice car I recommend it
+              - paragraph [ref=e604] [cursor=pointer]: Tata punch ki build quality bahot solid hai. Ise 5-star safety rating mili hai. Engine performance aur city driving experience bahot smooth hai lekin highway par pickup thoda slow lagta hai. Iska mileage kaafi sahi hai lagbhag 15-18 kmpl tak mil jata hai. Service cost pocket-friendly hai jisse maintenance ka kharcha kam hota hai. Daily use ke liye yeh bahot safe aur practical car hai.
+              - generic [ref=e605] [cursor=pointer]: Read More
+              - generic [ref=e607] [cursor=pointer]: "0"
+              - generic [ref=e610] [cursor=pointer]: Share
+              - generic [ref=e612] [cursor=pointer]:
+                - generic [ref=e613]: Rajesh Kumar
+                - generic [ref=e614]: 1 week ago
+            - listitem [ref=e615]:
+              - generic [ref=e617] [cursor=pointer]:
+                - generic [ref=e618]: Mini Countryman Electric
+                - text: 2 reviews
+              - generic [ref=e619]: Mini electric car
+              - paragraph [ref=e621] [cursor=pointer]: Good for women, in rainy season mini electric car is also good, its good for long drive, mini very comfortable. No petrol expensess so, car is reasonable.
+              - generic [ref=e623] [cursor=pointer]: "0"
+              - generic [ref=e626] [cursor=pointer]: Share
+              - generic [ref=e628] [cursor=pointer]:
+                - generic [ref=e629]: Janhavi Pawar
+                - generic [ref=e630]: 1 week ago
+            - listitem [ref=e631]:
+              - generic [ref=e633] [cursor=pointer]:
+                - generic [ref=e634]: Tata Indigo eCS
+                - generic [ref=e635]: "3.7"
+                - text: 61 reviews
+              - generic [ref=e636]: Tata Indigo ecs
+              - paragraph [ref=e638] [cursor=pointer]: Tata indigo ecs diesel, Bandra east 2011 model, Daily running to 20 km, Good car very good average.
+              - generic [ref=e640] [cursor=pointer]: "0"
+              - generic [ref=e643] [cursor=pointer]: Share
+              - generic [ref=e645] [cursor=pointer]:
+                - generic [ref=e646]: Satyanarayan
+                - generic [ref=e647]: 1 week ago
+            - listitem [ref=e648]:
+              - generic [ref=e650] [cursor=pointer]:
+                - generic [ref=e651]: Maruti Suzuki Celerio
+                - generic [ref=e652]: "3.8"
+                - text: 117 reviews
+              - generic [ref=e653]: Fuel efficient car
+              - paragraph [ref=e655] [cursor=pointer]: My first Celerio 2018 model vxi Amt. Then again exchanged for Celerio 2024 model ZXI+ AMT. One of the best car to save fuel. I have driven 30 kilometres only in 0.74 litre petrol for challenging drive and won the challenge in 2024.
+              - generic [ref=e656] [cursor=pointer]: Read More
+              - generic [ref=e658] [cursor=pointer]: "0"
+              - generic [ref=e661] [cursor=pointer]: Share
+              - generic [ref=e663] [cursor=pointer]:
+                - generic [ref=e664]: Anonymous
+                - generic [ref=e665]: 2 weeks ago
+          - link "Read All Reviews" [ref=e668] [cursor=pointer]:
+            - /url: /user-reviews
+      - generic [ref=e670]:
+        - heading "Web Stories of Cars" [level=2] [ref=e671]
+        - list [ref=e677]:
+          - listitem [ref=e678]:
+            - link "Skoda Kylaq Signature Plus In 10 Images Skoda Kylaq Signature Plus In 10 Images 28 Jan, 2025 1131 views" [ref=e680] [cursor=pointer]:
+              - /url: /web-stories/skoda-kylaq-signature-plus-in-10-images/55712/
+              - img "Skoda Kylaq Signature Plus In 10 Images" [ref=e682]
+              - generic [ref=e683]:
+                - strong [ref=e684]: Skoda Kylaq Signature Plus In 10 Images
+                - generic [ref=e685]:
+                  - text: 28 Jan, 2025
+                  - generic [ref=e686]: 1131 views
+          - listitem [ref=e687]:
+            - link "Kia Syros Review In 10 Images Kia Syros Review In 10 Images 28 Jan, 2025 1006 views" [ref=e689] [cursor=pointer]:
+              - /url: /web-stories/kia-syros-review-in-10-images/55707/
+              - img "Kia Syros Review In 10 Images" [ref=e691]
+              - generic [ref=e692]:
+                - strong [ref=e693]: Kia Syros Review In 10 Images
+                - generic [ref=e694]:
+                  - text: 28 Jan, 2025
+                  - generic [ref=e695]: 1006 views
+          - listitem [ref=e696]:
+            - link "Top 10 Things You Should Know About Kylaq Top 10 Things You Should Know About Kylaq 27 Jan, 2025 2544 views" [ref=e698] [cursor=pointer]:
+              - /url: /web-stories/top-10-things-you-should-know-about-kylaq/55696/
+              - img "Top 10 Things You Should Know About Kylaq" [ref=e700]
+              - generic [ref=e701]:
+                - strong [ref=e702]: Top 10 Things You Should Know About Kylaq
+                - generic [ref=e703]:
+                  - text: 27 Jan, 2025
+                  - generic [ref=e704]: 2544 views
+          - listitem [ref=e705]:
+            - link "Mercedes-Benz Lineup At Auto Expo 2025 Mercedes-Benz Lineup At Auto Expo 2025 27 Jan, 2025 254 views" [ref=e707] [cursor=pointer]:
+              - /url: /web-stories/mercedes-benz-lineup-at-auto-expo-2025/55692/
+              - img "Mercedes-Benz Lineup At Auto Expo 2025" [ref=e709]
+              - generic [ref=e710]:
+                - strong [ref=e711]: Mercedes-Benz Lineup At Auto Expo 2025
+                - generic [ref=e712]:
+                  - text: 27 Jan, 2025
+                  - generic [ref=e713]: 254 views
+          - listitem [ref=e714]:
+            - link "Top 6 India Car News Picks Over The Past Week Top 6 India Car News Picks Over The Past Week 25 Jan, 2025 260 views" [ref=e716] [cursor=pointer]:
+              - /url: /web-stories/top-6-india-car-news-picks-over-the-past-week/55670/
+              - img "Top 6 India Car News Picks Over The Past Week" [ref=e718]
+              - generic [ref=e719]:
+                - strong [ref=e720]: Top 6 India Car News Picks Over The Past Week
+                - generic [ref=e721]:
+                  - text: 25 Jan, 2025
+                  - generic [ref=e722]: 260 views
+          - listitem [ref=e723]:
+            - link "All Toyota And Lexus Cars Showcased At Auto Expo 2025 All Toyota And Lexus Cars Showcased At Auto Expo 2025 24 Jan, 2025 688 views" [ref=e725] [cursor=pointer]:
+              - /url: /web-stories/all-toyota-and-lexus-cars-showcased-at-auto-expo-2025/55660/
+              - img "All Toyota And Lexus Cars Showcased At Auto Expo 2025" [ref=e727]
+              - generic [ref=e728]:
+                - strong [ref=e729]: All Toyota And Lexus Cars Showcased At Auto Expo 2025
+                - generic [ref=e730]:
+                  - text: 24 Jan, 2025
+                  - generic [ref=e731]: 688 views
+          - listitem [ref=e732]:
+            - 'link "In Pics: 5 Hyundai Showcases At The Auto Expo 2025 In Pics: 5 Hyundai Showcases At The Auto Expo 2025 24 Jan, 2025 268 views" [ref=e734] [cursor=pointer]':
+              - /url: /web-stories/in-pics-5-hyundai-showcases-at-the-auto-expo-2025/55662/
+              - 'img "In Pics: 5 Hyundai Showcases At The Auto Expo 2025" [ref=e736]'
+              - generic [ref=e737]:
+                - strong [ref=e738]: "In Pics: 5 Hyundai Showcases At The Auto Expo 2025"
+                - generic [ref=e739]:
+                  - text: 24 Jan, 2025
+                  - generic [ref=e740]: 268 views
+          - listitem [ref=e741]:
+            - 'link "In Pics: Maruti Suzuki Showcases At The Auto Expo 2025 In Pics: Maruti Suzuki Showcases At The Auto Expo 2025 23 Jan, 2025 191 views" [ref=e743] [cursor=pointer]':
+              - /url: /web-stories/in-pics-maruti-suzuki-showcases-at-the-auto-expo-2025/55652/
+              - 'img "In Pics: Maruti Suzuki Showcases At The Auto Expo 2025" [ref=e745]'
+              - generic [ref=e746]:
+                - strong [ref=e747]: "In Pics: Maruti Suzuki Showcases At The Auto Expo 2025"
+                - generic [ref=e748]:
+                  - text: 23 Jan, 2025
+                  - generic [ref=e749]: 191 views
+          - listitem [ref=e750]:
+            - 'link "In Pics: Top 7 SUVs Showcased At The Auto Expo 2025 In Pics: Top 7 SUVs Showcased At The Auto Expo 2025 22 Jan, 2025 165 views" [ref=e752] [cursor=pointer]':
+              - /url: /web-stories/in-pics-top-7-suvs-showcased-at-the-auto-expo-2025/55635/
+              - 'img "In Pics: Top 7 SUVs Showcased At The Auto Expo 2025" [ref=e754]'
+              - generic [ref=e755]:
+                - strong [ref=e756]: "In Pics: Top 7 SUVs Showcased At The Auto Expo 2025"
+                - generic [ref=e757]:
+                  - text: 22 Jan, 2025
+                  - generic [ref=e758]: 165 views
+          - listitem [ref=e759]:
+            - link "Upcoming SUVs In India In 2025 Upcoming SUVs In India In 2025 22 Jan, 2025 411 views" [ref=e761] [cursor=pointer]:
+              - /url: /web-stories/upcoming-suvs-in-india-in-2025/55636/
+              - img "Upcoming SUVs In India In 2025" [ref=e763]
+              - generic [ref=e764]:
+                - strong [ref=e765]: Upcoming SUVs In India In 2025
+                - generic [ref=e766]:
+                  - text: 22 Jan, 2025
+                  - generic [ref=e767]: 411 views
+        - link "All Web Stories" [ref=e770] [cursor=pointer]:
+          - /url: /web-stories
+      - insertion
+      - generic [ref=e771]:
+        - heading "Car Offers on Top Brands" [level=2] [ref=e772]
+        - generic [ref=e773]:
+          - list [ref=e777]:
+            - listitem [ref=e778]:
+              - link "17 Offers" [ref=e780] [cursor=pointer]:
+                - /url: /offers-events/Delhi/audi
+                - generic [ref=e782]: 17 Offers
+            - listitem [ref=e783]:
+              - link "25 Offers" [ref=e785] [cursor=pointer]:
+                - /url: /offers-events/Delhi/bmw
+                - generic [ref=e787]: 25 Offers
+            - listitem [ref=e788]:
+              - link "21 Offers" [ref=e790] [cursor=pointer]:
+                - /url: /offers-events/Delhi/honda
+                - generic [ref=e792]: 21 Offers
+            - listitem [ref=e793]:
+              - link "62 Offers" [ref=e795] [cursor=pointer]:
+                - /url: /offers-events/Delhi/mercedes-benz
+                - generic [ref=e797]: 62 Offers
+            - listitem [ref=e798]:
+              - link "28 Offers" [ref=e800] [cursor=pointer]:
+                - /url: /offers-events/Delhi/nissan
+                - generic [ref=e802]: 28 Offers
+            - listitem [ref=e803]:
+              - link "113 Offers" [ref=e805] [cursor=pointer]:
+                - /url: /offers-events/Delhi/skoda
+                - generic [ref=e807]: 113 Offers
+            - listitem [ref=e808]:
+              - link "533 Offers" [ref=e810] [cursor=pointer]:
+                - /url: /offers-events/Delhi/tata
+                - generic [ref=e812]: 533 Offers
+            - listitem [ref=e813]:
+              - link "37 Offers" [ref=e815] [cursor=pointer]:
+                - /url: /offers-events/Delhi/volkswagen
+                - generic [ref=e817]: 37 Offers
+            - listitem [ref=e818]:
+              - link "6 Offers" [ref=e820] [cursor=pointer]:
+                - /url: /offers-events/Delhi/volvo
+                - generic [ref=e822]: 6 Offers
+            - listitem [ref=e823]:
+              - link "25 Offers" [ref=e825] [cursor=pointer]:
+                - /url: /offers-events/Delhi/renault
+                - generic [ref=e827]: 25 Offers
+            - listitem [ref=e828]:
+              - link "16 Offers" [ref=e830] [cursor=pointer]:
+                - /url: /offers-events/Delhi/isuzu
+                - generic [ref=e832]: 16 Offers
+            - listitem [ref=e833]:
+              - link "27 Offers" [ref=e835] [cursor=pointer]:
+                - /url: /offers-events/Delhi/jeep
+                - generic [ref=e837]: 27 Offers
+            - listitem [ref=e838]:
+              - link "26 Offers" [ref=e840] [cursor=pointer]:
+                - /url: /offers-events/Delhi/mg-motor
+                - generic [ref=e842]: 26 Offers
+            - listitem [ref=e843]:
+              - link "34 Offers" [ref=e845] [cursor=pointer]:
+                - /url: /offers-events/Delhi/citroen
+                - generic [ref=e847]: 34 Offers
+          - link "View All Offers" [ref=e850] [cursor=pointer]:
+            - /url: /offers-events/Delhi/
+      - generic:
+        - generic:
+          - link "Review and Win Banner":
+            - /url: javascript:;
+            - img "Review and Win Banner"
+      - generic [ref=e852]:
+        - heading "New Car Videos" [level=2] [ref=e853]
+        - generic [ref=e854]:
+          - list [ref=e858]:
+            - listitem [ref=e859]:
+              - iframe [ref=e861]:
+                
+              - generic [ref=e863]:
+                - 'link "2026 Tata Tiago and Tiago EV Review: Great Product! Great Quality?" [ref=e864] [cursor=pointer]':
+                  - /url: /gallery/reviews/2026-tata-tiago-and-tiago-ev-review-great-product-great-quality/57964/1
+                - text: 8 Jun, 2026 3711 views
+                - generic [ref=e865]: 25:13
+            - listitem [ref=e867]:
+              - iframe [ref=e869]:
+                
+              - generic [ref=e871]:
+                - 'link "2026 Tata Tiago and Tiago EV Review: Great Product! Great Quality?" [ref=e872] [cursor=pointer]':
+                  - /url: /gallery/reviews/2026-tata-tiago-and-tiago-ev-review-great-product-great-quality/57963/1
+                - text: 8 Jun, 2026 3506 views
+                - generic [ref=e873]: 25:13
+            - listitem [ref=e875]:
+              - iframe [ref=e877]:
+                
+              - generic [ref=e879]:
+                - link "Is The Honda City Still Worth Buying In 2026" [ref=e880] [cursor=pointer]:
+                  - /url: /gallery/reviews/is-the-honda-city-still-worth-buying-in-2026/57956/1
+                - text: 1 Jun, 2026 3436 views
+                - generic [ref=e881]: 14:56
+            - listitem [ref=e883]:
+              - iframe [ref=e885]:
+                
+              - generic [ref=e887]:
+                - 'link "Volkswagen Taigun Facelift Review: Might Not Be What You Want" [ref=e888] [cursor=pointer]':
+                  - /url: /gallery/reviews/volkswagen-taigun-facelift-review-might-not-be-what-you-want/57872/1
+                - text: 2 May, 2026 4966 views
+                - generic [ref=e889]: 15:44
+            - listitem [ref=e891]:
+              - iframe [ref=e893]:
+                
+              - generic [ref=e895]:
+                - link "Mercedes-Benz CLA 250+ Electric Review | ZigFastForward" [ref=e896] [cursor=pointer]:
+                  - /url: /gallery/reviews/mercedes-benz-cla-250-electric-review-zigfastforward/57856/1
+                - text: 26 Apr, 2026 5187 views
+                - generic [ref=e897]: 3:54
+          - link "View All Cars Videos" [ref=e901] [cursor=pointer]:
+            - /url: video
+      - generic [ref=e902]:
+        - heading "New Cars FAQs" [level=2] [ref=e903]
+        - generic [ref=e904]:
+          - heading "What are the new cars launched in India in 2026?" [level=3] [ref=e905] [cursor=pointer]: What are the new cars launched in India in 2026?
+          - generic [ref=e907]: The newly launched cars in India are BMW X6, MINI Countryman C, Mercedes-Benz S-Class.
+          - heading "What are the popular car brands in India?" [level=3] [ref=e908] [cursor=pointer]: What are the popular car brands in India?
+          - generic [ref=e910]: The popular car brands in India are Maruti Suzuki, Tata, Kia and Toyota and many more.
+          - heading "Are there any upcoming cars in India?" [level=3] [ref=e911] [cursor=pointer]: Are there any upcoming cars in India?
+          - generic [ref=e913]: Yes, there are many upcoming cars which are going to launch in India in 2026 are Tata Sierra EV, Skoda Kodiaq RS and Nissan Tekton check more upcoming cars.
+          - heading "What are the best mileage cars in India?" [level=3] [ref=e914] [cursor=pointer]: What are the best mileage cars in India?
+          - generic [ref=e916]: The best mileage cars in India are Maruti FRONX(21 kmpl), Hyundai Creta(17 kmpl), Maruti Ertiga(20 kmpl) and Maruti Swift(32 kmpl).
+          - heading "What are the best low budget cars?" [level=3] [ref=e917] [cursor=pointer]: What are the best low budget cars?
+          - generic [ref=e919]: The best low budget cars are Maruti Alto K10 at ₹3.70 Lakh, Maruti S-Presso at ₹3.50 Lakh and Vayve Mobility Eva at ₹3.25 Lakh.
+          - heading "What are the popular diesel cars available in India?" [level=3] [ref=e920] [cursor=pointer]: What are the popular diesel cars available in India?
+          - generic [ref=e922]: Tata Sierra, Hyundai Creta and Hyundai Venue are some of the popular diesel cars available in India.
+          - heading "Which brands offer electric cars in India?" [level=3] [ref=e923] [cursor=pointer]: Which brands offer electric cars in India?
+          - generic [ref=e925]: Electric cars are offered by Tata, Maruti and Tata in India.
+    - generic [ref=e927]:
+      - heading "New Cars News" [level=2] [ref=e928]
+      - list [ref=e932]:
+        - listitem [ref=e933] [cursor=pointer]: Latest
+        - listitem [ref=e934] [cursor=pointer]: Popular
+      - list [ref=e937]:
+        - listitem [ref=e938]:
+          - article [ref=e939]:
+            - img "5 Things We Love About The Skoda Kodiaq RS!" [ref=e940] [cursor=pointer]
+            - link "5 Things We Love About The Skoda Kodiaq RS!" [ref=e942] [cursor=pointer]:
+              - /url: /news-features/general-news/5-things-we-love-about-the-skoda-kodiaq-rs/58023/
+        - listitem [ref=e943]:
+          - article [ref=e944]:
+            - 'img "Kia Seltos vs Renault Duster: The Compact SUV War!" [ref=e945] [cursor=pointer]'
+            - 'link "Kia Seltos vs Renault Duster: The Compact SUV War!" [ref=e947] [cursor=pointer]':
+              - /url: /news-features/general-news/kia-seltos-vs-renault-duster-the-compact-suv-war/58020/
+        - listitem [ref=e948]:
+          - article [ref=e949]:
+            - img "Meet Skoda Peaq - Unveiled As Skoda’s Flagship And Its Biggest Ever SUV Globally!" [ref=e950] [cursor=pointer]
+            - link "Meet Skoda Peaq - Unveiled As Skoda’s Flagship And Its Biggest Ever SUV Globally!" [ref=e952] [cursor=pointer]:
+              - /url: /news-features/general-news/meet-skoda-peaq-unveiled-as-skodas-flagship-and-its-biggest-ever-suv-globally/58016/
+        - listitem [ref=e953]:
+          - article [ref=e954]:
+            - img "MG's First Plug-in Hybrid SUV Arrives July 16? Here’s Everything About The Wuling Starlight 560" [ref=e955] [cursor=pointer]
+            - link "MG's First Plug-in Hybrid SUV Arrives July 16? Here’s Everything About The Wuling Starlight 560" [ref=e957] [cursor=pointer]:
+              - /url: /news-features/general-news/mgs-first-plug-in-hybrid-suv-arrives-july-16-heres-everything-about-the-wuling-starlight-560/58015/
+        - listitem [ref=e958]:
+          - article [ref=e959]:
+            - img "Top 5 Honda Cars That Every Indian Loved" [ref=e960] [cursor=pointer]
+            - link "Top 5 Honda Cars That Every Indian Loved" [ref=e962] [cursor=pointer]:
+              - /url: /news-features/general-news/top-5-honda-cars-that-every-indian-loved/58012/
+  - list [ref=e964]:
+    - listitem [ref=e965]:
+      - link "Home" [ref=e966] [cursor=pointer]:
+        - /url: https://www.zigwheels.com
+      - text: ›
+    - listitem [ref=e967]: New Cars
+  - contentinfo [ref=e968]:
+    - text:     
+    - generic [ref=e970]:
+      - list [ref=e971]:
+        - listitem [ref=e972]:
+          - link "About Us" [ref=e973] [cursor=pointer]:
+            - /url: /aboutus
+        - listitem [ref=e974]:
+          - generic [ref=e975] [cursor=pointer]: Advertise with us
+        - listitem [ref=e976]:
+          - link "contact us" [ref=e977] [cursor=pointer]:
+            - /url: /contactus
+      - list [ref=e978]:
+        - listitem [ref=e979]:
+          - link "Terms of use" [ref=e980] [cursor=pointer]:
+            - /url: /termsofuse
+        - listitem [ref=e981]:
+          - link "privacy policy" [ref=e982] [cursor=pointer]:
+            - /url: /privacypolicy
+        - listitem [ref=e983]:
+          - generic [ref=e984] [cursor=pointer]: feedback
+      - generic [ref=e985]:
+        - generic [ref=e986]:
+          - img "zig-logo" [ref=e988] [cursor=pointer]
+          - list [ref=e989]:
+            - listitem [ref=e990]:
+              - link "" [ref=e991] [cursor=pointer]:
+                - /url: https://www.facebook.com/zigwheels
+                - generic [ref=e992]: 
+            - listitem [ref=e993]:
+              - link "" [ref=e994] [cursor=pointer]:
+                - /url: https://x.com/zigwheels
+                - generic [ref=e995]: 
+            - listitem [ref=e996]:
+              - link "" [ref=e997] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UCjmjWp38PCg15Z5ZS-tmpfw
+                - generic [ref=e998]: 
+            - listitem [ref=e999]:
+              - link "" [ref=e1000] [cursor=pointer]:
+                - /url: https://www.instagram.com/zigwheels
+                - generic [ref=e1001]: 
+            - listitem [ref=e1002]:
+              - link "" [ref=e1003] [cursor=pointer]:
+                - /url: https://in.linkedin.com/company/zigwheels
+                - generic [ref=e1004]: 
+        - generic [ref=e1005]:
+          - text: Download ZigWheels app
+          - generic [ref=e1006]:
+            - generic [ref=e1007]: "4.6"
+            - generic [ref=e1008]: 
+            - generic [ref=e1009]: User Rating
+            - generic [ref=e1010]: 10 Lakh+
+            - generic [ref=e1011]: Download
+        - generic:
+          - img "appimg"
+          - img "appimg"
+    - generic [ref=e1013]: © 2008-2026 Girnar Software Pvt. Ltd. All rights Reserved.
+```
+
+# Test source
+
+```ts
+  1  | import{test,expect} from '@playwright/test';
+  2  | import { HomePage } from '../Pages/HomePage';
+  3  | import { NewCarsPage } from '../Pages/NewCarsPage';
+  4  | 
+  5  | 
+  6  | test.describe('Find Latest Cars', () => {
+  7  | let homePage: HomePage;
+  8  | let newCarsPage: NewCarsPage;
+  9  | 
+  10 | test.beforeEach(async ({ page }) => {
+  11 | homePage = new HomePage(page);
+  12 | newCarsPage = new NewCarsPage(page);
+  13 | await homePage.navigateTo();
+  14 | 
+  15 | });
+  16 | 
+  17 | test('Find Latest Cars', async ({ page }) => {
+  18 |   await homePage.findLatestCars();
+  19 |   await expect(page).toHaveURL(/.*newcars.*/);
+  20 |   await console.log(newCarsPage.getHeadingText());
+> 21 |   await expect( newCarsPage.getHeadingText()).toContain('New Cars');
+     |                                               ^ TypeError: received is not iterable
+  22 |   //await expect( newCarsPage.getHeadingText()).toContain('New Cars');
+  23 | });
+  24 | });
+```

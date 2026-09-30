@@ -1,0 +1,23 @@
+{
+  "HomePage": {
+    "newCarsMenu": "//span[normalize-space()='NEW CARS']",
+    "findNewCars": "//a[contains(@href,'/newcars') and normalize-space()='Search New Cars']",
+    "newCarsMenuSubMenu": "//span[normalize-space()='NEW CARS']/following-sibling::ul"
+  },
+
+  "NewCarsPage": {
+    "newCarsHeading": "//h1[normalize-space()='New Cars']",
+    "TataCars": "//a[@title='Tata Cars']//div[@class='ht-20']",
+    "HyundaiCars": "//a[@title='Hyundai Cars']//div[@class='ht-20']",
+    "MarutiCars": "//a[@title='Maruti Cars']//div[@class='ht-20']",
+    "MahindraCars": "//a[@title='Mahindra Cars']//div[@class='ht-20']",
+    "carBudgetBoxes": "//div[@data-track-label='browseby-budget-click']//a[contains(@href,'/newcars/')]",
+    "NewCarInIndia_PopularCars":"//*[@id='similarSlider']//a[@data-track-label='popular-cars-bike' and @itemprop='relatedLink']"
+  },
+
+  "Search": {
+    "SearchBox": "//input[@id='headerSearch']",
+    "searchButton": "//button[@type='submit']",
+    "ClearSearch": "(//span[@id='suggest_crossicon_headerSearch'])[1]"
+  }
+}

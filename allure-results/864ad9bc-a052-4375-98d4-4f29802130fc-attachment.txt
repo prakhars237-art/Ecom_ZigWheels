@@ -1,0 +1,55 @@
+Current URL: https://www.zigwheels.com/
+Budget boxes count: 7
+[
+  'Cars under 4 Lakh',
+  'Cars under 6 Lakh',
+  'Cars under 10 Lakh',
+  'Cars under 15 Lakh',
+  'Cars under 20 Lakh',
+  'Cars under 40 Lakh',
+  'Cars above 40 Lakh'
+]
+Current URL: https://www.zigwheels.com/
+Budget boxes count: 7
+[
+  'Cars under 4 Lakh',
+  'Cars under 6 Lakh',
+  'Cars under 10 Lakh',
+  'Cars under 15 Lakh',
+  'Cars under 20 Lakh',
+  'Cars under 40 Lakh',
+  'Cars above 40 Lakh'
+]
+Current URL: https://www.zigwheels.com/
+Budget boxes count: 7
+[
+  'Cars under 4 Lakh',
+  'Cars under 6 Lakh',
+  'Cars under 10 Lakh',
+  'Cars under 15 Lakh',
+  'Cars under 20 Lakh',
+  'Cars under 40 Lakh',
+  'Cars above 40 Lakh'
+]
+Current URL: https://www.zigwheels.com/
+Budget boxes count: 7
+[
+  'Cars under 4 Lakh',
+  'Cars under 6 Lakh',
+  'Cars under 10 Lakh',
+  'Cars under 15 Lakh',
+  'Cars under 20 Lakh',
+  'Cars under 40 Lakh',
+  'Cars above 40 Lakh'
+]
+Current URL: https://www.zigwheels.com/
+Budget boxes count: 7
+[
+  'Cars under 4 Lakh',
+  'Cars under 6 Lakh',
+  'Cars under 10 Lakh',
+  'Cars under 15 Lakh',
+  'Cars under 20 Lakh',
+  'Cars under 40 Lakh',
+  'Cars above 40 Lakh'
+]

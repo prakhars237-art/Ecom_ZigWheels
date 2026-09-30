@@ -1,0 +1,56 @@
+{
+  "validCars": [
+    {
+      "name": "Hyundai Creta",
+      "url": "hyundai-cars/creta"
+    },
+    {
+      "name": "Tata Nexon",
+      "url": "tata-cars/nexon"
+    },
+    {
+      "name": "Maruti Brezza",
+      "url": "maruti-suzuki-cars/brezza"
+    },
+    {
+      "name": "Hyundai Venue",
+      "url": "hyundai-cars/venue"
+    }
+  ],
+  "invalidCars": [
+    "XYZ123456",
+    "ABC999999"
+  ],
+
+  
+  "budgetCars": [
+    {
+      "name": "Under 4 Lakh",
+      "url": "/newcars/cars-under-4-lakhs"
+    },
+    {
+      "name": "Under 6 Lakh",
+      "url": "/newcars/cars-under-6-lakhs"
+    },
+    {
+      "name": "Under 10 Lakh",
+      "url": "/newcars/cars-under-10-lakhs"
+    },
+    {
+      "name": "Under 15 Lakh",
+      "url": "/newcars/cars-under-15-lakhs"
+    },
+    {
+      "name": "Under 20 Lakh",
+      "url": "/newcars/cars-under-20-lakhs"
+    },
+    {
+      "name": "Under 40 Lakh",
+      "url": "/newcars/cars-under-40-lakhs"
+    },
+    {
+      "name": "Above 40 Lakh",
+      "url": "/newcars/cars-above-40-lakhs"
+    }
+  ]
+}
